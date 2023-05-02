@@ -1,0 +1,151 @@
+@import "screen";
+
+/*=============================== MOBILE TO FIRST =================================*/
+@mixin for-xxs {//320
+  @media (min-width: #{$screen-xxs}) {
+    @content;
+  }
+}
+
+@mixin for-xs { //380
+  @media (min-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+@mixin for-sm {//576
+  @media (min-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin for-md {//768
+  @media (min-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+// Extra medium devices
+@mixin for-lg {//992
+  @media (min-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin for-xl {   //1200
+  @media (min-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin for-xxl { //1440
+  @media (min-width: #{$screen-2xl}) {
+    @content;
+  }
+}
+
+//Quad Extra large devices
+@mixin for-fxl { //1600
+  @media (min-width: #{$screen-fxl}) {
+    @content;
+  }
+}
+
+// Full Extra large desktops
+@mixin for-qxl { //1920
+  @media (min-width: #{$screen-qxl}) {
+    @content;
+  }
+}
+
+// Quad Full Extra large desktops
+@mixin for-uxl { //2540
+  @media (min-width: #{$screen-uxl}) {
+    @content;
+  }
+}
+
+
+
+
+/*=============================== DESCTOP TO FIRST =================================*/
+
+// ONLY BEFORE xxs
+@mixin before-xxs {//320
+  @media (max-width: #{$screen-xxs}) {
+    @content;
+  }
+}
+// ONLY BEFORE xs
+@mixin before-xs { //380
+  @media (max-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+// ONLY BEFORE SM
+@mixin before-sm {  //576
+  @media (max-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+// ONLY BEFORE SM
+@mixin before-md { //768
+  @media (max-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+// ONLY BEFORE lg
+@mixin before-lg {//992
+  @media (max-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+// ONLY BEFORE XL
+@mixin before-xl {//1200
+  @media (max-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+// ONLY BEFORE XXL
+@mixin before-xxl { //1440
+  @media (max-width: #{$screen-2xl}) {
+    @content;
+  }
+}
+
+// ONLY BEFORE fxl
+@mixin before-fxl {//1600
+  @media (max-width: #{$screen-fxl}) {
+    @content;
+  }
+}
+
+// ONLY BEFORE XXXL
+@mixin before-qxl {//1920
+  @media (max-width: #{$screen-qxl}) {
+    @content;
+  }
+}
+
+
+// ONLY BEFORE uxL
+@mixin before-uxl {//2540
+  @media (max-width: #{$screen-uxl}) {
+    @content;
+  }
+}
+
+// ONLY BEFORE euxL
+@mixin before-euxl {//2540
+  @media (max-width: #{$screen-euxl}) {
+    @content;
+  }
+}
