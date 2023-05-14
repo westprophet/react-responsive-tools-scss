@@ -22,7 +22,8 @@ module.exports = {
     "@typescript-eslint"
   ],
   rules: {
-    "import/no-unresolved": "error"// Строка влияет на alias
+    "import/no-unresolved": "error",// Строка влияет на alias
+    "linebreak-style": ["error", "unix"],
     // "no-unused-vars": "off"
   },
   ignorePatterns: [".eslintrc.js", "webpack.config.js"],

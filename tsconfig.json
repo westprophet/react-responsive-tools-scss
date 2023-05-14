@@ -1,16 +1,22 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "CommonJS",
-    "lib": ["ESNext", "dom"],
-    "declaration": true,
-    "outDir": "dist",
+    "target": "ES2020",
+    "lib": ["dom", "es6"],
+    "jsx": "react",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "sourceMap": true,
     "strict": true,
-    "esModuleInterop": true,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "declaration": true,
+    "esModuleInterop": true
   },
   "ts-node": {
-    // Do not forget to `npm i -D tsconfig-paths`
-    "require": ["tsconfig-paths/register"]
+    "compilerOptions": {
+      "module": "commonjs"
+    }
   },
   "include": [
     "declarations.d.ts",

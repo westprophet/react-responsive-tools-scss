@@ -1,30 +1,29 @@
 {
-  "name": "adaptive-tools-scss",
-  "version": "0.1.0",
+  "name": "react-responsive-tools-scss",
+  "version": "0.1.8",
   "description": "",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "index.js",
+  "module": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production",
-    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\""
+    "build": "tsc && webpack --mode production",
+    "tsc": "tsc",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "lint-fix": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\" --fix"
   },
   "files": [
-    "dist",
-    "LICENSE",
-    "README.md"
+    "./"
   ],
   "keywords": [
     "react",
     "typescript",
     "scss-tools",
-    "adaptive-scss"
+    "react-responsive"
   ],
   "author": "westprophet",
   "license": "ISC",
   "dependencies": {
-    "react": "^18.2.0",
     "react-responsive": "^9.0.2"
   },
   "devDependencies": {

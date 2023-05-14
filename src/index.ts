@@ -8,6 +8,8 @@ export type {
   TBreakpointSize,
 };
 
+export * from 'react-responsive';
+
 export {
   useBreakpoints,
 };

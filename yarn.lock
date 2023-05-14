@@ -3537,6 +3537,14 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-responsive-tools-scss@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/react-responsive-tools-scss/-/react-responsive-tools-scss-0.1.0.tgz#06c5808cbdc47ebafd858d87af14bdba0a411444"
+  integrity sha512-F0lbfdcEhllBM9uhfBk0r+JqpIxePZI0oVXNlgOUEwmr4FW5noyyeYxYonCls2k+x+OL+KLkmH82JBQE/R/+8g==
+  dependencies:
+    react "^18.2.0"
+    react-responsive "^9.0.2"
+
 react-responsive@^9.0.2:
   version "9.0.2"
   resolved "https://registry.yarnpkg.com/react-responsive/-/react-responsive-9.0.2.tgz#34531ca77a61e7a8775714016d21241df7e4205c"
