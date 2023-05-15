@@ -22,6 +22,11 @@ export function For(p: ForComponentProps) {
     if(b[p.size]) return p.children;
     else return null;
 }
+export function Before(p: ForComponentProps) {
+    const b = useBreakpoints();
+    if(!b[p.size]) return p.children;
+    else return null;
+}
 
 export function ForXS(p: Props) {
     return <For {...p} size="xs" />;
@@ -50,3 +55,30 @@ export function ForXXXL(p: Props) {
     return <For {...p} size="xxxl" />;
 }
 
+
+export function BeforeXS(p: Props) {
+    return <Before {...p} size="xs" />;
+}
+
+export function BeforeSM(p: Props) {
+    return <Before {...p} size="sm" />;
+}
+
+export function BeforeLG(p: Props) {
+    return <Before {...p} size="lg" />;
+}
+export function BeforeMD(p: Props) {
+    return <Before {...p} size="md" />;
+}
+
+export function BeforeXL(p: Props) {
+    return <Before {...p} size="xl" />;
+}
+
+export function BeforeXXL(p: Props) {
+    return <Before {...p} size="xxl" />;
+}
+
+export function BeforeXXXL(p: Props) {
+    return <Before {...p} size="xxxl" />;
+}
