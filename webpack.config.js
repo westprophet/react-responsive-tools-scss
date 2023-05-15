@@ -5,7 +5,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const source = path.resolve(__dirname, "src");
 
 module.exports = ({ development }) => ({
-  // entry: `${source}/index.js`,
+  entry: `${source}/index.js`,
   devtool: development ? "inline-source-map" : false,
   mode: development ? "development" : "production",
   module: {

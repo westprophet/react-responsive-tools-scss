@@ -10,6 +10,8 @@ export type {
 
 export * from 'react-responsive';
 
+export * from './components/horizontal';
+
 export {
   useBreakpoints,
 };
