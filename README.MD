@@ -1,187 +1,59 @@
-# Adaptive Tools SCSS
+# react-adaptable-scss: Adaptive SCSS Tools
 
-Это инструменты и некоторые конфигурации созданные для упрощения написания адаптивного кода в двух плоскостях
+This project holds a toolkit and several configurations designed to simplify writing adaptive code in two dimensions:
+vertical and horizontal.
 
-## Структура
+## Structure
 
-В папке **scss** так лежат файлы
+The project includes the scss directory with the following files:
 
-- `_data.scss` - брейкпоинты
-- `_horizontal.scss` - миксины для работы с горизонтальной версткой
-- `_screen.scss` - промежуточный файл для экспорта в js
-- `_vertical.scss` - миксины для работы с вертикальной версткой
-- `_export.module.scss` - файл для чистого экспорта в js
+- `_data.scss`: Contains break-points.
+- `_horizontal.scss` and `_vertical.scss`: Include files that provide mixins for interaction with horizontal and
+  vertical layouts, respectively.
+- `_screen.scss`: An intermediate file for JS export.
+- `_export.module.scss`: A file meant for explicit JS export.
+- `useBreakpoint.ts`: A TypeScript file implementing the `useBreakpoint` hook for identifying current breakpoint.
+- `useBreakpoints.ts`: A TypeScript file implementing the `useBreakpoints` hook for getting the list of currently active
+  breakpoints.
+- `useVBreakpoint.ts`: A TypeScript file implementing the `useVBreakpoint` hook for identifying current vertical
+  breakpoint.
+- `useVBreakpoints.ts`: A TypeScript file implementing the `useVBreakpoints` hook for getting the list of currently
+  active vertical breakpoints.
+- `ForMF.ts` and `ForDF.ts`: TypeScript files implementing two utility components `ForMF` and `ForDF`. They take
+  breakpoint size and children as props. `ForMF` uses the `useBreakpointMF` hook to determine if the display size
+  matches the given breakpoint. If so, it renders the children; otherwise, it renders `null`. Similarly, `ForDF` uses
+  the `useBreakpointDF` hook to make the same determination.
 
-## Брейкпоинты
+## Breakpoints
 
-Намеренно фиксированный набор переменных под разные экраны
+This project purposefully uses a set of fixed variables designed for different screen sizes, which include xs, sm, md,
+lg, xl, xxl, and xxxl.
 
-Зарегистрированные размеры:
+## Mixins Application
 
-```ts
-type TBreakpointSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
-```
+In this project, mixins are bundled together with the include decorator, thus formatting descriptive statements for
+breakpoints based on them.
 
-```scss
-// Extra Small tablets and large smartphones (landscape view)
-$xxs: 320;
+## useBreakpoints Hook
 
-// Small tablets and large smartphones (landscape view)
-$xs: 380;
+The project incorporates a hook, `useBreakpoints`, which is based on react-responsive that allows you to retrieve
+current screen breakpoints for use in React.js.
 
-// Small tablets and large smartphones (landscape view)
-$sm: 576;
+## useBreakpoint Hook
 
-// Small tablets (portrait view)
-$md: 768;
+The project incorporates a hook, `useBreakpoint`, which is based on react-responsive that allows you to retrieve
+current screen breakpoints for use in React.js.
 
-// Tablets and small desktops
-$lg: 992;
+## Components
 
-// Large tablets and medium desktops
-$xl: 1200;
+The project includes some components for convenience that display content only on certain breakpoints.
 
-// Large desktops
-$xxl: 1400;
+## Future Growth Perspectives
 
-// Extra Large desktops
-$fxl: 1550;
+We'd love to add the following functionalities in the future:
 
-// Full Extra large desktops
-$qxl: 1920;
-
-// Ultra  large desktops
-$uxl: 2540;
-
-// Extra Ultra desktops
-$euxl: 4096;
-
-```
-
-## Применение миксинов
-
-Схема работы:
-
-```scss
-    @include
-[? vh
-
-]
--
-[for | before]
-
--
-[breakpoint] {
-  //...
-}
-```
-
-Где:
-
-- [vh?] - вертикальная ориентация (если не указано то горизонтальная)
-- [for | before] - mobile to first или desktop to first
-- [breakpoint] - cам брейкпоинт типа `TBreakpointSize`
-
-```scss
-    @import 'react-adatptive-tools-scss';
-
-@include for-md {
-  width: 20px;
-  //...
-}
-
-@include for-lg {
-  //...
-}
-
-@include before-lg {
-  //...
-}
-
-@include before-xs {
-  //...
-}
-
-@include vh-before-sm {
-  //...
-}
-
-@include vh-for-sm {
-  //...
-}
-```
-
-## Хук useBreakpoints
-
-Основан на [react-responsive](https://www.npmjs.com/package/react-responsive)
-
-Так же на борту есть:
-`useBreakpoints` - хук который вытягивает текущие брейкпоинты экрана для работы в react.js
-
-Example:
-
-```tsx
-    const b = useBreakpoints(); //get breakpoints
-if (b?.xs || b['xxl']) { //check breackpoints 
-    //...
-}
-//...
-return (
-    <div>
-        <h1>{title}</h1>
-        {/*conditional render*/}
-        {b?.sm && <h2>{subtitle}</h2>}
-    </div>
-)
-
-```
-
-> Хук работает при SSR
-
-## Компоненты
-
-Так же для удобства выведены некоторые компоненты
-Которые показывают содержимое только на определенных эндпоинтах
-КОмпоненты очень просты в использовании
-
-> For, ForXS, ForSM, ForLG, ForXXXL ...
-
-
-
-Пример:
-
-```tsx
-    <For size="lg">  {/* size: TBreakpointSize*/}
-        <ProfileButton/>
-    </For>
-    <ForLG>
-        <ProfileButton/>
-    </ForLG>
-    
-    <ForXS>
-        <ProfileButton/>
-    </ForXS>
-
-    //...
-
-    <Before size="lg">  {/* size: TBreakpointSize*/}
-        <ProfileButton/>
-    </Before>
-
-    <BeforeXS>
-        <ProfileButton/>
-    </BeforeXS>
-    
-
-```
-
-## Перспектива роста
-
-В будущем хотелось бы добавить возможность:
-
-- переопределять переменные **scss**
-- конфигурировать название брейкпоинтов?
-- отдельная конфигурация брейкпоинтов под вертикальную верстку
-- вывести библиотеку react-responsive для кастомного использования в рамках одного пакета
-- добавление шаблонов `live templates` под **`webstorm`** для молнейносной верстки
-- 
+- Redefining SCSS variables.
+- Configuring the names of breakpoints.
+- Separate breakpoint configurations for vertical layout.
+- Integration with the external library react-responsive for its custom use under this single package.
+- Addition of WebStorm live templates for lightning-quick layout designs.
