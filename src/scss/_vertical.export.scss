@@ -1,0 +1,10 @@
+@import "data";
+
+:export{
+  xs: map-get($vertical-breakpoints, xs);
+  sm: map-get($vertical-breakpoints, sm);
+  md: map-get($vertical-breakpoints, md);
+  lg: map-get($vertical-breakpoints, lg);
+  xl: map-get($vertical-breakpoints, xl);
+  xxl: map-get($vertical-breakpoints, xxl);
+}

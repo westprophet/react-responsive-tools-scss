@@ -1,17 +1,18 @@
-import useBreakpoints from './hooks/useBreakpoints';
-
-import TBreakpoints from './interfaces/TBreakpoints';
-import TBreakpointSize from './interfaces/TBreakpointSize';
-
-export type {
-  TBreakpoints,
-  TBreakpointSize,
-};
+import { TBreakpoints, TVerticalBreakpoints } from './interfaces/TBreakpoints';
+import { TBreakpoint, TVerticalBreakpoint } from './interfaces/TBreakpoint';
 
 export * from 'react-responsive';
 
-export * from './components/horizontal';
+export * from './hooks/horizontal/useBreakpoints';
+export * from './hooks/horizontal/useBreakpoint';
+export * from './hooks/vertical/useVBreakpoint';
+export * from './hooks/vertical/useVBreakpoints';
 
-export {
-  useBreakpoints,
+export type {
+  TBreakpoints,
+  TBreakpoint,
+  TVerticalBreakpoint,
+  TVerticalBreakpoints,
 };
+
+export * from './components/horizontal';

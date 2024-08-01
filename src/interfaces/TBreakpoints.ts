@@ -1,7 +1,9 @@
-import TBreakpointSize from './TBreakpointSize';
+import { TBreakpoint, TVerticalBreakpoint } from './TBreakpoint';
 
-export default TBreakpoints;
+export type TBreakpoints<T> = {
+  [key in TBreakpoint]: T;
+};
 
-type TBreakpoints<T> = {
-  [key in TBreakpointSize]: T;
+export type TVerticalBreakpoints<T> = {
+  [key in TVerticalBreakpoint]: T;
 };
