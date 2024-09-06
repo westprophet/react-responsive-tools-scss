@@ -1,21 +1,24 @@
-$horizontal-breakpoints: (
-        xs: 320,
-        sm: 576,
-        md: 768,
-        lg: 992,
-        lt: 1024,
-        ltm: 1200,
-        ltl: 1440,
-        xl: 1920,
-        xxl: 2560,
-        qxl: 3840
-);
+// _data.scss
+@import './custom-breakpoints';
 
-$vertical-breakpoints: (
-        xs: 600, // for mobile devices in portrait mode
-        sm: 800, // for most mobile devices in landscape mode and some tablets in portrait mode
-        md: 1000, // for most tablets in portrait mode and some tablets in landscape mode
-        lg: 1200, // for most tablets in landscape mode and some small workstations
-        xl: 1600, // for large workstations
-        xxl: 1601 // for extra-large monitors and TVs
-);
+:export {
+  // Экспорт горизонтальных брейкпоинтов
+  xs: map-get($horizontal-breakpoints, xs);
+  sm: map-get($horizontal-breakpoints, sm);
+  md: map-get($horizontal-breakpoints, md);
+  lg: map-get($horizontal-breakpoints, lg);
+  lt: map-get($horizontal-breakpoints, lt);
+  ltm: map-get($horizontal-breakpoints, ltm);
+  ltl: map-get($horizontal-breakpoints, ltl);
+  xl: map-get($horizontal-breakpoints, xl);
+  xxl: map-get($horizontal-breakpoints, xxl);
+  qxl: map-get($horizontal-breakpoints, qxl);
+
+  // Экспорт вертикальных брейкпоинтов
+  vxs: map-get($vertical-breakpoints, xs);
+  vsm: map-get($vertical-breakpoints, sm);
+  vmd: map-get($vertical-breakpoints, md);
+  vlg: map-get($vertical-breakpoints, lg);
+  vxl: map-get($vertical-breakpoints, xl);
+  vxxl: map-get($vertical-breakpoints, xxl);
+}

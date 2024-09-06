@@ -1,16 +1,19 @@
 {
   "name": "react-adaptable-scss",
-  "version": "0.1.12",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "module": "index.js",
   "types": "index.d.ts",
   "scripts": {
     "dev": "webpack --mode development --watch",
-    "build": "tsc && webpack --mode production",
+    "build": "npm run generate-breakpoints && tsc && webpack --mode production",
     "tsc": "tsc",
+    "test": "jest",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
-    "lint-fix": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\" --fix"
+    "lint-fix": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\" --fix",
+    "generate-breakpoints": "node loadBreakpoints.js",
+    "postinstall": "npm run generate-breakpoints"
   },
   "files": [
     "./"
@@ -31,6 +34,10 @@
     "@babel/core": "^7.21.5",
     "@babel/preset-env": "^7.21.5",
     "@babel/preset-typescript": "^7.21.5",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/react-hooks": "^8.0.1",
+    "@types/jest": "^29.5.12",
     "@types/node": "^18.16.3",
     "@types/react-dom": "^18.2.1",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
@@ -47,10 +54,13 @@
     "eslint-webpack-plugin": "^4.0.1",
     "file-loader": "^6.2.0",
     "husky": "^8.0.3",
+    "jest": "^29.7.0",
     "react-dom": "^18.2.0",
+    "react-test-renderer": "^18.3.1",
     "sass": "^1.62.1",
     "sass-loader": "^13.2.2",
     "style-loader": "^3.3.2",
+    "ts-jest": "^29.2.5",
     "ts-loader": "^9.4.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.0.4",
