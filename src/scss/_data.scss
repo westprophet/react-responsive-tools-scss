@@ -3,19 +3,19 @@ $horizontal-breakpoints: (
         sm: 576,
         md: 768,
         lg: 992,
-        lt: 1023,
-        ltm: 1199,
-        ltl: 1439,
-        xl: 1919,
-        xxl: 2559,
+        lt: 1024,
+        ltm: 1200,
+        ltl: 1440,
+        xl: 1920,
+        xxl: 2560,
         qxl: 3840
 );
 
 $vertical-breakpoints: (
-        xs: 600,     // для мобильных устройств в портретном режиме
-        sm: 800,     // для большинства мобильных устройств в ландшафтном режиме и некоторых планшетов в портретном режиме
-        md: 1000,    // для большинства планшетов в портретном режиме и некоторых планшетов в ландшафтном режиме
-        lg: 1200,    // для большинства планшетов в ландшафтном режиме и некоторых маленьких рабочих станций
-        xl: 1600,    // для больших рабочих станций
-        xxl: 1601    // для сверхбольших мониторов и телевизоров
+        xs: 600, // for mobile devices in portrait mode
+        sm: 800, // for most mobile devices in landscape mode and some tablets in portrait mode
+        md: 1000, // for most tablets in portrait mode and some tablets in landscape mode
+        lg: 1200, // for most tablets in landscape mode and some small workstations
+        xl: 1600, // for large workstations
+        xxl: 1601 // for extra-large monitors and TVs
 );

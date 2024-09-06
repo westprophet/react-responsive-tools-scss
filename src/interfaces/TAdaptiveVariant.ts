@@ -1,1 +1,1 @@
-export type TAdaptiveVariant = 'MobileToFirst' | 'DesktopToFirst'
+export type TAdaptiveVariant = 'MobToFirst' | 'DeskToFirst'
