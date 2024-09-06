@@ -10,17 +10,19 @@ interface Props {
 }
 
 interface ForComponentProps extends Props {
-  size: TBreakpoint;
+  p: TBreakpoint | number;
 }
 
-export function ForMF(p: ForComponentProps) {
-  const is = useBreakpointMF(p.size);
-  if (is) return p.children;
+export function ForMF({children, p}: ForComponentProps) {
+  const is = useBreakpointMF(p);
+  if (is) return children;
   return null;
 }
 
-export function ForDF(p: ForComponentProps) {
-  const is = useBreakpointDF(p.size);
-  if (is) return p.children;
+
+export function ForDF({children ,p}: ForComponentProps) {
+  const is = useBreakpointDF(p);
+  if (is) return children;
   return null;
 }
+

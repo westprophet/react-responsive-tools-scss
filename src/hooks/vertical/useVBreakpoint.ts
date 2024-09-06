@@ -5,16 +5,16 @@ import { TVerticalBreakpoint } from '../../interfaces/TBreakpoint';
 import { TAdaptiveVariant } from '../../interfaces/TAdaptiveVariant';
 import useVariant from '../useVariant';
 
-export default function useVBreakpoint(b: TVerticalBreakpoint, variant: TAdaptiveVariant = 'MobToFirst') {
-  const p = breakpoints[b];
+export default function useVBreakpoint(b: TVerticalBreakpoint | number, variant: TAdaptiveVariant = 'MtF') {
+  const p = typeof b === 'number' ? b :  breakpoints[b];
   const v = useVariant(variant);
   return useMediaQuery({ query: `(${v}-height: ${p}px)` });
 }
 
-export function useVBreakpointMF(b: TVerticalBreakpoint) {
-  return useVBreakpoint(b, 'MobToFirst');
+export function useVBreakpointMF(b: TVerticalBreakpoint | number) {
+  return useVBreakpoint(b, 'MtF');
 }
 
-export function useVBreakpointDF(b: TVerticalBreakpoint) {
-  return useVBreakpoint(b, 'MobToFirst');
+export function useVBreakpointDF(b: TVerticalBreakpoint | number) {
+  return useVBreakpoint(b, 'MtF');
 }

@@ -32,7 +32,7 @@
     });
 
     describe('useBreakpointMF', () => {
-      it('should return true for the `MobToFirst` variant', () => {
+      it('should return true for the `MtF` variant', () => {
         const mockedUseMediaQuery = require('react-responsive').useMediaQuery as jest.Mock;
         mockedUseMediaQuery.mockReturnValue(true);
 
@@ -44,7 +44,7 @@
     });
 
     describe('useBreakpointDF', () => {
-      it('should return true for the `DeskToFirst` variant', () => {
+      it('should return true for the `DtF` variant', () => {
         const mockedUseMediaQuery = require('react-responsive').useMediaQuery as jest.Mock;
         mockedUseMediaQuery.mockReturnValue(true);
 

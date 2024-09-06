@@ -5,7 +5,7 @@ import { TBreakpoints } from '../../interfaces/TBreakpoints';
 import { TAdaptiveVariant } from '../../interfaces/TAdaptiveVariant';
 import useVariant from '../useVariant';
 
-export default function useBreakpoints(variant: TAdaptiveVariant = 'MobToFirst'): TBreakpoints<boolean> {
+export default function useBreakpoints(variant: TAdaptiveVariant = 'MtF'): TBreakpoints<boolean> {
   const v = useVariant(variant);
   return {
     xs: useMediaQuery({ query: `(${v}-width: ${breakpoints.xs}px)` }),
@@ -22,9 +22,9 @@ export default function useBreakpoints(variant: TAdaptiveVariant = 'MobToFirst')
 }
 
 export function useBreakpointsMF(): TBreakpoints<boolean> {
-  return useBreakpoints('MobToFirst');
+  return useBreakpoints('MtF');
 }
 
 export function useBreakpointsDF(): TBreakpoints<boolean> {
-  return useBreakpoints('DeskToFirst');
+  return useBreakpoints('DtF');
 }
