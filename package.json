@@ -1,22 +1,26 @@
 {
-  "name": "react-adaptable-scss",
-  "version": "1.0.1",
+  "name": "react-responsive-tools",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "module": "index.js",
   "types": "index.d.ts",
   "scripts": {
     "dev": "webpack --mode development --watch",
-    "build": "npm run generate-breakpoints && tsc && webpack --mode production",
     "tsc": "tsc",
     "test": "jest",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
     "lint-fix": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\" --fix",
-    "generate-breakpoints": "node loadBreakpoints.js",
-    "postinstall": "npm run generate-breakpoints"
+
+    "build": "tsc && webpack --mode production"
+
   },
   "files": [
-    "./"
+    "src",
+    "*.ts",
+    "*.scss",
+    "index.js",
+    "index.d.ts"
   ],
   "keywords": [
     "react",
@@ -27,7 +31,6 @@
   "author": "westprophet",
   "license": "ISC",
   "dependencies": {
-    "classnames": "^2.5.1",
     "react-responsive": "^10.0.0"
   },
   "devDependencies": {

@@ -1,0 +1,12 @@
+node_modules
+dist
+test
+.git
+.vscode
+.idea
+coverage
+*.log
+webpack.config.js
+jest.config.js
+.yarnrc
+.yarn

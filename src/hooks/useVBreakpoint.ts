@@ -1,14 +1,14 @@
 import { useMediaQuery } from 'react-responsive';
 
-import breakpoints from '../../scss/_vertical.export.scss';
-import { TVerticalBreakpoint } from '../../interfaces/TBreakpoint';
-import { TAdaptiveVariant } from '../../interfaces/TAdaptiveVariant';
-import useVariant from '../useVariant';
+import { TVerticalBreakpoint } from '../interfaces/TBreakpoint';
+import { TAdaptiveVariant } from '../interfaces/TAdaptiveVariant';
+import useVariant from './useVariant';
+import {getCSSBreakpoint, getCSSVBreakpoint} from "./getCSSVariable";
 
 export default function useVBreakpoint(b: TVerticalBreakpoint | number, variant: TAdaptiveVariant = 'MtF') {
-  const p = typeof b === 'number' ? b :  breakpoints[b];
+  const _bp = typeof b === 'number' ? b + 'px' :  getCSSVBreakpoint(b);
   const v = useVariant(variant);
-  return useMediaQuery({ query: `(${v}-height: ${p}px)` });
+  return useMediaQuery({ query: `(${v}-height: ${_bp})` });
 }
 
 export function useVBreakpointMF(b: TVerticalBreakpoint | number) {

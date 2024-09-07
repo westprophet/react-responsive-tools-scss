@@ -3,7 +3,7 @@
  */
 
 import { TBreakpoint } from '../interfaces/TBreakpoint';
-import { useBreakpointDF, useBreakpointMF } from '../hooks/horizontal/useBreakpoint';
+import { useBreakpointDF, useBreakpointMF } from '../hooks/useBreakpoint';
 
 interface Props {
   children: any;

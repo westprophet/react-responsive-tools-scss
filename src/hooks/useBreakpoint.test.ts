@@ -7,7 +7,7 @@
       useMediaQuery: jest.fn(),
     }));
 
-    jest.mock('../useVariant', () => jest.fn(() => 'min'));
+    jest.mock('./useVariant', () => jest.fn(() => 'min'));
 
     describe('useBreakpoint', () => {
       it('should return true for the media query that matches the breakpoint', () => {
