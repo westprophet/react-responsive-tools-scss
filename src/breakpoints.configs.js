@@ -1,6 +1,6 @@
 // breakpointConfig.js
 
-const horizontalBreakpoints = {
+const HORIZONTAL_BREAKPOINTS = {
   xs: '320px',
   sm: '576px',
   md: '768px',
@@ -13,7 +13,7 @@ const horizontalBreakpoints = {
   qxl: '3840px',
 };
 
-const verticalBreakpoints = {
+const VERTICAL_BREAKPOINTS = {
   xs: '600px',
   sm: '800px',
   md: '1000px',
@@ -22,4 +22,4 @@ const verticalBreakpoints = {
   xxl: '1601px',
 };
 
-export { horizontalBreakpoints, verticalBreakpoints };
+export { HORIZONTAL_BREAKPOINTS, VERTICAL_BREAKPOINTS };
