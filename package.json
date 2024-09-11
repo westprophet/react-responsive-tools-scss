@@ -1,6 +1,6 @@
 {
   "name": "react-responsive-tools",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "",
   "main": "index.js",
   "module": "index.js",
@@ -19,6 +19,7 @@
     "*.ts",
     "*.scss",
     "index.js",
+    "reinit.sh",
     "index.d.ts"
   ],
   "keywords": [
