@@ -10,8 +10,20 @@ const __dirname = path.dirname(__filename);
 
 // Функция генерации SCSS содержимого для горизонтальных брейкпоинтов
 const generateHorizontalSCSS = (breakpoints) => {
-  const beforeMixins = Object.keys(breakpoints).map(bp => `@mixin for-${bp}(){\n  @include mob-first(${bp}){\n    @content;\n  }\n}`).join('\n');
-  const afterMixins = Object.keys(breakpoints).map(bp => `@mixin before-${bp}(){\n  @include desk-first(${bp}){\n    @content;\n  }\n}`).join('\n');
+  const beforeMixins = Object.keys(breakpoints).map(bp => `
+// ${bp} - ${breakpoints[bp]}
+@mixin for-${bp}(){
+  @include mob-first(${bp}){
+    @content;
+  }
+}`).join('\n');
+  const afterMixins = Object.keys(breakpoints).map(bp => `
+// ${bp} - ${breakpoints[bp]}
+@mixin before-${bp}(){
+  @include desk-first(${bp}){
+    @content;
+  }
+}`).join('\n');
   return `
 @import "horizontal";
 
@@ -23,8 +35,20 @@ ${afterMixins}
 
 // Функция генерации SCSS содержимого для вертикальных брейкпоинтов
 const generateVerticalSCSS = (breakpoints) => {
-  const beforeMixins = Object.keys(breakpoints).map(bp => `@mixin v-for-${bp}(){\n  @include v-mob-first(${bp}){\n    @content;\n  }\n}`).join('\n');
-  const afterMixins = Object.keys(breakpoints).map(bp => `@mixin v-before-${bp}(){\n  @include v-desk-first(${bp}){\n    @content;\n  }\n}`).join('\n');
+  const beforeMixins = Object.keys(breakpoints).map(bp => `
+// ${bp} - ${breakpoints[bp]}
+@mixin v-for-${bp}(){
+  @include v-mob-first(${bp}){
+    @content;
+  }
+}`).join('\n');
+  const afterMixins = Object.keys(breakpoints).map(bp => `
+// ${bp} - ${breakpoints[bp]}
+@mixin v-before-${bp}(){
+  @include v-desk-first(${bp}){
+    @content;
+  }
+}`).join('\n');
   return `
 @import "vertical";
 
