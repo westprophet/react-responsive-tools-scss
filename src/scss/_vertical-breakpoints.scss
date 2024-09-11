@@ -1,0 +1,88 @@
+
+@import "vertical";
+
+
+// xs - 600px
+@mixin v-for-xs(){
+  @include v-mob-first(xs){
+    @content;
+  }
+}
+
+// sm - 800px
+@mixin v-for-sm(){
+  @include v-mob-first(sm){
+    @content;
+  }
+}
+
+// md - 1000px
+@mixin v-for-md(){
+  @include v-mob-first(md){
+    @content;
+  }
+}
+
+// lg - 1200px
+@mixin v-for-lg(){
+  @include v-mob-first(lg){
+    @content;
+  }
+}
+
+// xl - 1600px
+@mixin v-for-xl(){
+  @include v-mob-first(xl){
+    @content;
+  }
+}
+
+// xxl - 1601px
+@mixin v-for-xxl(){
+  @include v-mob-first(xxl){
+    @content;
+  }
+}
+
+
+// xs - 600px
+@mixin v-before-xs(){
+  @include v-desk-first(xs){
+    @content;
+  }
+}
+
+// sm - 800px
+@mixin v-before-sm(){
+  @include v-desk-first(sm){
+    @content;
+  }
+}
+
+// md - 1000px
+@mixin v-before-md(){
+  @include v-desk-first(md){
+    @content;
+  }
+}
+
+// lg - 1200px
+@mixin v-before-lg(){
+  @include v-desk-first(lg){
+    @content;
+  }
+}
+
+// xl - 1600px
+@mixin v-before-xl(){
+  @include v-desk-first(xl){
+    @content;
+  }
+}
+
+// xxl - 1601px
+@mixin v-before-xxl(){
+  @include v-desk-first(xxl){
+    @content;
+  }
+}

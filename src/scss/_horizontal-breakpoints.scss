@@ -1,0 +1,144 @@
+
+@import "horizontal";
+
+
+// xs - 320px
+@mixin for-xs(){
+  @include mob-first(xs){
+    @content;
+  }
+}
+
+// sm - 576px
+@mixin for-sm(){
+  @include mob-first(sm){
+    @content;
+  }
+}
+
+// md - 768px
+@mixin for-md(){
+  @include mob-first(md){
+    @content;
+  }
+}
+
+// lg - 992px
+@mixin for-lg(){
+  @include mob-first(lg){
+    @content;
+  }
+}
+
+// lt - 1024px
+@mixin for-lt(){
+  @include mob-first(lt){
+    @content;
+  }
+}
+
+// ltm - 1200px
+@mixin for-ltm(){
+  @include mob-first(ltm){
+    @content;
+  }
+}
+
+// ltl - 1440px
+@mixin for-ltl(){
+  @include mob-first(ltl){
+    @content;
+  }
+}
+
+// xl - 1920px
+@mixin for-xl(){
+  @include mob-first(xl){
+    @content;
+  }
+}
+
+// xxl - 2560px
+@mixin for-xxl(){
+  @include mob-first(xxl){
+    @content;
+  }
+}
+
+// qxl - 3840px
+@mixin for-qxl(){
+  @include mob-first(qxl){
+    @content;
+  }
+}
+
+
+// xs - 320px
+@mixin before-xs(){
+  @include desk-first(xs){
+    @content;
+  }
+}
+
+// sm - 576px
+@mixin before-sm(){
+  @include desk-first(sm){
+    @content;
+  }
+}
+
+// md - 768px
+@mixin before-md(){
+  @include desk-first(md){
+    @content;
+  }
+}
+
+// lg - 992px
+@mixin before-lg(){
+  @include desk-first(lg){
+    @content;
+  }
+}
+
+// lt - 1024px
+@mixin before-lt(){
+  @include desk-first(lt){
+    @content;
+  }
+}
+
+// ltm - 1200px
+@mixin before-ltm(){
+  @include desk-first(ltm){
+    @content;
+  }
+}
+
+// ltl - 1440px
+@mixin before-ltl(){
+  @include desk-first(ltl){
+    @content;
+  }
+}
+
+// xl - 1920px
+@mixin before-xl(){
+  @include desk-first(xl){
+    @content;
+  }
+}
+
+// xxl - 2560px
+@mixin before-xxl(){
+  @include desk-first(xxl){
+    @content;
+  }
+}
+
+// qxl - 3840px
+@mixin before-qxl(){
+  @include desk-first(qxl){
+    @content;
+  }
+}
