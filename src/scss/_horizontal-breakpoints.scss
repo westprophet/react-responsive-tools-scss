@@ -2,143 +2,283 @@
 @import "horizontal";
 
 
-// xs - 320px
-@mixin for-xs(){
-  @include mob-first(xs){
+/**
+ * Mixin for applying styles for screens greater than or equal to 320pxpx.
+ * Usage:
+ * 
+ * @include for-xs {
+ *    // your styles here
+ * }
+ */
+@mixin for-xs() {
+  @include mob-first(xs) {
     @content;
   }
 }
 
-// sm - 576px
-@mixin for-sm(){
-  @include mob-first(sm){
+/**
+ * Mixin for applying styles for screens greater than or equal to 576pxpx.
+ * Usage:
+ * 
+ * @include for-sm {
+ *    // your styles here
+ * }
+ */
+@mixin for-sm() {
+  @include mob-first(sm) {
     @content;
   }
 }
 
-// md - 768px
-@mixin for-md(){
-  @include mob-first(md){
+/**
+ * Mixin for applying styles for screens greater than or equal to 768pxpx.
+ * Usage:
+ * 
+ * @include for-md {
+ *    // your styles here
+ * }
+ */
+@mixin for-md() {
+  @include mob-first(md) {
     @content;
   }
 }
 
-// lg - 992px
-@mixin for-lg(){
-  @include mob-first(lg){
+/**
+ * Mixin for applying styles for screens greater than or equal to 992pxpx.
+ * Usage:
+ * 
+ * @include for-lg {
+ *    // your styles here
+ * }
+ */
+@mixin for-lg() {
+  @include mob-first(lg) {
     @content;
   }
 }
 
-// lt - 1024px
-@mixin for-lt(){
-  @include mob-first(lt){
+/**
+ * Mixin for applying styles for screens greater than or equal to 1024pxpx.
+ * Usage:
+ * 
+ * @include for-lt {
+ *    // your styles here
+ * }
+ */
+@mixin for-lt() {
+  @include mob-first(lt) {
     @content;
   }
 }
 
-// ltm - 1200px
-@mixin for-ltm(){
-  @include mob-first(ltm){
+/**
+ * Mixin for applying styles for screens greater than or equal to 1200pxpx.
+ * Usage:
+ * 
+ * @include for-ltm {
+ *    // your styles here
+ * }
+ */
+@mixin for-ltm() {
+  @include mob-first(ltm) {
     @content;
   }
 }
 
-// ltl - 1440px
-@mixin for-ltl(){
-  @include mob-first(ltl){
+/**
+ * Mixin for applying styles for screens greater than or equal to 1440pxpx.
+ * Usage:
+ * 
+ * @include for-ltl {
+ *    // your styles here
+ * }
+ */
+@mixin for-ltl() {
+  @include mob-first(ltl) {
     @content;
   }
 }
 
-// xl - 1920px
-@mixin for-xl(){
-  @include mob-first(xl){
+/**
+ * Mixin for applying styles for screens greater than or equal to 1920pxpx.
+ * Usage:
+ * 
+ * @include for-xl {
+ *    // your styles here
+ * }
+ */
+@mixin for-xl() {
+  @include mob-first(xl) {
     @content;
   }
 }
 
-// xxl - 2560px
-@mixin for-xxl(){
-  @include mob-first(xxl){
+/**
+ * Mixin for applying styles for screens greater than or equal to 2560pxpx.
+ * Usage:
+ * 
+ * @include for-xxl {
+ *    // your styles here
+ * }
+ */
+@mixin for-xxl() {
+  @include mob-first(xxl) {
     @content;
   }
 }
 
-// qxl - 3840px
-@mixin for-qxl(){
-  @include mob-first(qxl){
+/**
+ * Mixin for applying styles for screens greater than or equal to 3840pxpx.
+ * Usage:
+ * 
+ * @include for-qxl {
+ *    // your styles here
+ * }
+ */
+@mixin for-qxl() {
+  @include mob-first(qxl) {
     @content;
   }
 }
 
 
-// xs - 320px
-@mixin before-xs(){
-  @include desk-first(xs){
+/**
+ * Mixin for applying styles for screens less than 320pxpx.
+ * Usage:
+ * 
+ * @include before-xs {
+ *    // your styles here
+ * }
+ */
+@mixin before-xs() {
+  @include desk-first(xs) {
     @content;
   }
 }
 
-// sm - 576px
-@mixin before-sm(){
-  @include desk-first(sm){
+/**
+ * Mixin for applying styles for screens less than 576pxpx.
+ * Usage:
+ * 
+ * @include before-sm {
+ *    // your styles here
+ * }
+ */
+@mixin before-sm() {
+  @include desk-first(sm) {
     @content;
   }
 }
 
-// md - 768px
-@mixin before-md(){
-  @include desk-first(md){
+/**
+ * Mixin for applying styles for screens less than 768pxpx.
+ * Usage:
+ * 
+ * @include before-md {
+ *    // your styles here
+ * }
+ */
+@mixin before-md() {
+  @include desk-first(md) {
     @content;
   }
 }
 
-// lg - 992px
-@mixin before-lg(){
-  @include desk-first(lg){
+/**
+ * Mixin for applying styles for screens less than 992pxpx.
+ * Usage:
+ * 
+ * @include before-lg {
+ *    // your styles here
+ * }
+ */
+@mixin before-lg() {
+  @include desk-first(lg) {
     @content;
   }
 }
 
-// lt - 1024px
-@mixin before-lt(){
-  @include desk-first(lt){
+/**
+ * Mixin for applying styles for screens less than 1024pxpx.
+ * Usage:
+ * 
+ * @include before-lt {
+ *    // your styles here
+ * }
+ */
+@mixin before-lt() {
+  @include desk-first(lt) {
     @content;
   }
 }
 
-// ltm - 1200px
-@mixin before-ltm(){
-  @include desk-first(ltm){
+/**
+ * Mixin for applying styles for screens less than 1200pxpx.
+ * Usage:
+ * 
+ * @include before-ltm {
+ *    // your styles here
+ * }
+ */
+@mixin before-ltm() {
+  @include desk-first(ltm) {
     @content;
   }
 }
 
-// ltl - 1440px
-@mixin before-ltl(){
-  @include desk-first(ltl){
+/**
+ * Mixin for applying styles for screens less than 1440pxpx.
+ * Usage:
+ * 
+ * @include before-ltl {
+ *    // your styles here
+ * }
+ */
+@mixin before-ltl() {
+  @include desk-first(ltl) {
     @content;
   }
 }
 
-// xl - 1920px
-@mixin before-xl(){
-  @include desk-first(xl){
+/**
+ * Mixin for applying styles for screens less than 1920pxpx.
+ * Usage:
+ * 
+ * @include before-xl {
+ *    // your styles here
+ * }
+ */
+@mixin before-xl() {
+  @include desk-first(xl) {
     @content;
   }
 }
 
-// xxl - 2560px
-@mixin before-xxl(){
-  @include desk-first(xxl){
+/**
+ * Mixin for applying styles for screens less than 2560pxpx.
+ * Usage:
+ * 
+ * @include before-xxl {
+ *    // your styles here
+ * }
+ */
+@mixin before-xxl() {
+  @include desk-first(xxl) {
     @content;
   }
 }
 
-// qxl - 3840px
-@mixin before-qxl(){
-  @include desk-first(qxl){
+/**
+ * Mixin for applying styles for screens less than 3840pxpx.
+ * Usage:
+ * 
+ * @include before-qxl {
+ *    // your styles here
+ * }
+ */
+@mixin before-qxl() {
+  @include desk-first(qxl) {
     @content;
   }
 }

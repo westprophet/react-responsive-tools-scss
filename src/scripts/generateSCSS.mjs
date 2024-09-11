@@ -11,19 +11,35 @@ const __dirname = path.dirname(__filename);
 // Функция генерации SCSS содержимого для горизонтальных брейкпоинтов
 const generateHorizontalSCSS = (breakpoints) => {
   const beforeMixins = Object.keys(breakpoints).map(bp => `
-// ${bp} - ${breakpoints[bp]}
-@mixin for-${bp}(){
-  @include mob-first(${bp}){
+/**
+ * Mixin for applying styles for screens greater than or equal to ${breakpoints[bp]}px.
+ * Usage:
+ * 
+ * @include for-${bp} {
+ *    // your styles here
+ * }
+ */
+@mixin for-${bp}() {
+  @include mob-first(${bp}) {
     @content;
   }
 }`).join('\n');
+
   const afterMixins = Object.keys(breakpoints).map(bp => `
-// ${bp} - ${breakpoints[bp]}
-@mixin before-${bp}(){
-  @include desk-first(${bp}){
+/**
+ * Mixin for applying styles for screens less than ${breakpoints[bp]}px.
+ * Usage:
+ * 
+ * @include before-${bp} {
+ *    // your styles here
+ * }
+ */
+@mixin before-${bp}() {
+  @include desk-first(${bp}) {
     @content;
   }
 }`).join('\n');
+
   return `
 @import "horizontal";
 
@@ -36,19 +52,35 @@ ${afterMixins}
 // Функция генерации SCSS содержимого для вертикальных брейкпоинтов
 const generateVerticalSCSS = (breakpoints) => {
   const beforeMixins = Object.keys(breakpoints).map(bp => `
-// ${bp} - ${breakpoints[bp]}
-@mixin v-for-${bp}(){
-  @include v-mob-first(${bp}){
+/**
+ * Mixin for applying styles for screens with height greater than or equal to ${breakpoints[bp]}px.
+ * Usage:
+ * 
+ * @include v-for-${bp} {
+ *    // your styles here
+ * }
+ */
+@mixin v-for-${bp}() {
+  @include v-mob-first(${bp}) {
     @content;
   }
 }`).join('\n');
+
   const afterMixins = Object.keys(breakpoints).map(bp => `
-// ${bp} - ${breakpoints[bp]}
-@mixin v-before-${bp}(){
-  @include v-desk-first(${bp}){
+/**
+ * Mixin for applying styles for screens with height less than ${breakpoints[bp]}px.
+ * Usage:
+ * 
+ * @include v-before-${bp} {
+ *    // your styles here
+ * }
+ */
+@mixin v-before-${bp}() {
+  @include v-desk-first(${bp}) {
     @content;
   }
 }`).join('\n');
+
   return `
 @import "vertical";
 
