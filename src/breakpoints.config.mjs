@@ -1,5 +1,5 @@
 
-// breakpoints.config.js
+// breakpoints.config.mjs
 const HORIZONTAL_BREAKPOINTS = {
   "xs": "320px",
   "sm": "576px",
