@@ -2,11 +2,13 @@
  * Created by westp on 15.05.2023
  */
 
+import React from "react";
+
 import { TBreakpoint } from '../interfaces/TBreakpoint';
 import { useBreakpointDF, useBreakpointMF } from '../hooks/useBreakpoint';
 
 interface Props {
-  children: any;
+  children: React.ReactNode;
 }
 
 interface ForComponentProps extends Props {

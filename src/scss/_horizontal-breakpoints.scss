@@ -3,12 +3,12 @@
 
 
 /**
- * Mixin for applying styles for screens greater than or equal to 320pxpx.
- * Usage:
- * 
- * @include for-xs {
+ * @mixin for-xs
+ * @description Mixin for applying styles for screens greater than or equal to 320pxpx.
+ * @example
+ *  @include for-xs {
  *    // your styles here
- * }
+ *  }
  */
 @mixin for-xs() {
   @include mob-first(xs) {
@@ -16,13 +16,14 @@
   }
 }
 
+
 /**
- * Mixin for applying styles for screens greater than or equal to 576pxpx.
- * Usage:
- * 
- * @include for-sm {
+ * @mixin for-sm
+ * @description Mixin for applying styles for screens greater than or equal to 576pxpx.
+ * @example
+ *  @include for-sm {
  *    // your styles here
- * }
+ *  }
  */
 @mixin for-sm() {
   @include mob-first(sm) {
@@ -31,12 +32,12 @@
 }
 
 /**
- * Mixin for applying styles for screens greater than or equal to 768pxpx.
- * Usage:
- * 
- * @include for-md {
+ * @mixin for-md
+ * @description Mixin for applying styles for screens greater than or equal to 768pxpx.
+ * @example
+ *  @include for-md {
  *    // your styles here
- * }
+ *  }
  */
 @mixin for-md() {
   @include mob-first(md) {
@@ -45,12 +46,12 @@
 }
 
 /**
- * Mixin for applying styles for screens greater than or equal to 992pxpx.
- * Usage:
- * 
- * @include for-lg {
+ * @mixin for-lg
+ * @description Mixin for applying styles for screens greater than or equal to 992pxpx.
+ * @example
+ *  @include for-lg {
  *    // your styles here
- * }
+ *  }
  */
 @mixin for-lg() {
   @include mob-first(lg) {
@@ -59,12 +60,12 @@
 }
 
 /**
- * Mixin for applying styles for screens greater than or equal to 1024pxpx.
- * Usage:
- * 
- * @include for-lt {
+ * @mixin for-lt
+ * @description Mixin for applying styles for screens greater than or equal to 1024pxpx.
+ * @example
+ *  @include for-lt {
  *    // your styles here
- * }
+ *  }
  */
 @mixin for-lt() {
   @include mob-first(lt) {
@@ -73,12 +74,12 @@
 }
 
 /**
- * Mixin for applying styles for screens greater than or equal to 1200pxpx.
- * Usage:
- * 
- * @include for-ltm {
+ * @mixin for-ltm
+ * @description Mixin for applying styles for screens greater than or equal to 1200pxpx.
+ * @example
+ *  @include for-ltm {
  *    // your styles here
- * }
+ *  }
  */
 @mixin for-ltm() {
   @include mob-first(ltm) {
@@ -87,12 +88,12 @@
 }
 
 /**
- * Mixin for applying styles for screens greater than or equal to 1440pxpx.
- * Usage:
- * 
- * @include for-ltl {
+ * @mixin for-ltl
+ * @description Mixin for applying styles for screens greater than or equal to 1440pxpx.
+ * @example
+ *  @include for-ltl {
  *    // your styles here
- * }
+ *  }
  */
 @mixin for-ltl() {
   @include mob-first(ltl) {
@@ -101,12 +102,12 @@
 }
 
 /**
- * Mixin for applying styles for screens greater than or equal to 1920pxpx.
- * Usage:
- * 
- * @include for-xl {
+ * @mixin for-xl
+ * @description Mixin for applying styles for screens greater than or equal to 1920pxpx.
+ * @example
+ *  @include for-xl {
  *    // your styles here
- * }
+ *  }
  */
 @mixin for-xl() {
   @include mob-first(xl) {
@@ -115,12 +116,12 @@
 }
 
 /**
- * Mixin for applying styles for screens greater than or equal to 2560pxpx.
- * Usage:
- * 
- * @include for-xxl {
+ * @mixin for-xxl
+ * @description Mixin for applying styles for screens greater than or equal to 2560pxpx.
+ * @example
+ *  @include for-xxl {
  *    // your styles here
- * }
+ *  }
  */
 @mixin for-xxl() {
   @include mob-first(xxl) {
@@ -129,12 +130,12 @@
 }
 
 /**
- * Mixin for applying styles for screens greater than or equal to 3840pxpx.
- * Usage:
- * 
- * @include for-qxl {
+ * @mixin for-qxl
+ * @description Mixin for applying styles for screens greater than or equal to 3840pxpx.
+ * @example
+ *  @include for-qxl {
  *    // your styles here
- * }
+ *  }
  */
 @mixin for-qxl() {
   @include mob-first(qxl) {
@@ -144,12 +145,12 @@
 
 
 /**
- * Mixin for applying styles for screens less than 320pxpx.
- * Usage:
- * 
- * @include before-xs {
+ * @mixin before-xs
+ * @description Mixin for applying styles for screens less than 320pxpx.
+ * @example
+ *  @include before-xs {
  *    // your styles here
- * }
+ *  }
  */
 @mixin before-xs() {
   @include desk-first(xs) {
@@ -158,12 +159,12 @@
 }
 
 /**
- * Mixin for applying styles for screens less than 576pxpx.
- * Usage:
- * 
- * @include before-sm {
+ * @mixin before-sm
+ * @description Mixin for applying styles for screens less than 576pxpx.
+ * @example
+ *  @include before-sm {
  *    // your styles here
- * }
+ *  }
  */
 @mixin before-sm() {
   @include desk-first(sm) {
@@ -172,12 +173,12 @@
 }
 
 /**
- * Mixin for applying styles for screens less than 768pxpx.
- * Usage:
- * 
- * @include before-md {
+ * @mixin before-md
+ * @description Mixin for applying styles for screens less than 768pxpx.
+ * @example
+ *  @include before-md {
  *    // your styles here
- * }
+ *  }
  */
 @mixin before-md() {
   @include desk-first(md) {
@@ -186,12 +187,12 @@
 }
 
 /**
- * Mixin for applying styles for screens less than 992pxpx.
- * Usage:
- * 
- * @include before-lg {
+ * @mixin before-lg
+ * @description Mixin for applying styles for screens less than 992pxpx.
+ * @example
+ *  @include before-lg {
  *    // your styles here
- * }
+ *  }
  */
 @mixin before-lg() {
   @include desk-first(lg) {
@@ -200,12 +201,12 @@
 }
 
 /**
- * Mixin for applying styles for screens less than 1024pxpx.
- * Usage:
- * 
- * @include before-lt {
+ * @mixin before-lt
+ * @description Mixin for applying styles for screens less than 1024pxpx.
+ * @example
+ *  @include before-lt {
  *    // your styles here
- * }
+ *  }
  */
 @mixin before-lt() {
   @include desk-first(lt) {
@@ -214,12 +215,12 @@
 }
 
 /**
- * Mixin for applying styles for screens less than 1200pxpx.
- * Usage:
- * 
- * @include before-ltm {
+ * @mixin before-ltm
+ * @description Mixin for applying styles for screens less than 1200pxpx.
+ * @example
+ *  @include before-ltm {
  *    // your styles here
- * }
+ *  }
  */
 @mixin before-ltm() {
   @include desk-first(ltm) {
@@ -228,12 +229,12 @@
 }
 
 /**
- * Mixin for applying styles for screens less than 1440pxpx.
- * Usage:
- * 
- * @include before-ltl {
+ * @mixin before-ltl
+ * @description Mixin for applying styles for screens less than 1440pxpx.
+ * @example
+ *  @include before-ltl {
  *    // your styles here
- * }
+ *  }
  */
 @mixin before-ltl() {
   @include desk-first(ltl) {
@@ -242,12 +243,12 @@
 }
 
 /**
- * Mixin for applying styles for screens less than 1920pxpx.
- * Usage:
- * 
- * @include before-xl {
+ * @mixin before-xl
+ * @description Mixin for applying styles for screens less than 1920pxpx.
+ * @example
+ *  @include before-xl {
  *    // your styles here
- * }
+ *  }
  */
 @mixin before-xl() {
   @include desk-first(xl) {
@@ -256,12 +257,12 @@
 }
 
 /**
- * Mixin for applying styles for screens less than 2560pxpx.
- * Usage:
- * 
- * @include before-xxl {
+ * @mixin before-xxl
+ * @description Mixin for applying styles for screens less than 2560pxpx.
+ * @example
+ *  @include before-xxl {
  *    // your styles here
- * }
+ *  }
  */
 @mixin before-xxl() {
   @include desk-first(xxl) {
@@ -270,12 +271,12 @@
 }
 
 /**
- * Mixin for applying styles for screens less than 3840pxpx.
- * Usage:
- * 
- * @include before-qxl {
+ * @mixin before-qxl
+ * @description Mixin for applying styles for screens less than 3840pxpx.
+ * @example
+ *  @include before-qxl {
  *    // your styles here
- * }
+ *  }
  */
 @mixin before-qxl() {
   @include desk-first(qxl) {

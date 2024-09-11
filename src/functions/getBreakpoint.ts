@@ -1,4 +1,4 @@
-// @ts-ignore
+
 import { HORIZONTAL_BREAKPOINTS, VERTICAL_BREAKPOINTS } from '../breakpoints.config';
 import { TBreakpoint, TVerticalBreakpoint } from '../interfaces/TBreakpoint';
 

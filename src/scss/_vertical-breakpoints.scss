@@ -3,12 +3,12 @@
 
 
 /**
- * Mixin for applying styles for screens with height greater than or equal to 600pxpx.
- * Usage:
- * 
- * @include v-for-xs {
+ * @mixin v-for-xs
+ * @description Mixin for applying styles for screens with height greater than or equal to 600pxpx.
+ * @example
+ *  @include v-for-xs {
  *    // your styles here
- * }
+ *  }
  */
 @mixin v-for-xs() {
   @include v-mob-first(xs) {
@@ -17,12 +17,12 @@
 }
 
 /**
- * Mixin for applying styles for screens with height greater than or equal to 800pxpx.
- * Usage:
- * 
- * @include v-for-sm {
+ * @mixin v-for-sm
+ * @description Mixin for applying styles for screens with height greater than or equal to 800pxpx.
+ * @example
+ *  @include v-for-sm {
  *    // your styles here
- * }
+ *  }
  */
 @mixin v-for-sm() {
   @include v-mob-first(sm) {
@@ -31,12 +31,12 @@
 }
 
 /**
- * Mixin for applying styles for screens with height greater than or equal to 1000pxpx.
- * Usage:
- * 
- * @include v-for-md {
+ * @mixin v-for-md
+ * @description Mixin for applying styles for screens with height greater than or equal to 1000pxpx.
+ * @example
+ *  @include v-for-md {
  *    // your styles here
- * }
+ *  }
  */
 @mixin v-for-md() {
   @include v-mob-first(md) {
@@ -45,12 +45,12 @@
 }
 
 /**
- * Mixin for applying styles for screens with height greater than or equal to 1200pxpx.
- * Usage:
- * 
- * @include v-for-lg {
+ * @mixin v-for-lg
+ * @description Mixin for applying styles for screens with height greater than or equal to 1200pxpx.
+ * @example
+ *  @include v-for-lg {
  *    // your styles here
- * }
+ *  }
  */
 @mixin v-for-lg() {
   @include v-mob-first(lg) {
@@ -59,12 +59,12 @@
 }
 
 /**
- * Mixin for applying styles for screens with height greater than or equal to 1600pxpx.
- * Usage:
- * 
- * @include v-for-xl {
+ * @mixin v-for-xl
+ * @description Mixin for applying styles for screens with height greater than or equal to 1600pxpx.
+ * @example
+ *  @include v-for-xl {
  *    // your styles here
- * }
+ *  }
  */
 @mixin v-for-xl() {
   @include v-mob-first(xl) {
@@ -73,12 +73,12 @@
 }
 
 /**
- * Mixin for applying styles for screens with height greater than or equal to 1601pxpx.
- * Usage:
- * 
- * @include v-for-xxl {
+ * @mixin v-for-xxl
+ * @description Mixin for applying styles for screens with height greater than or equal to 1601pxpx.
+ * @example
+ *  @include v-for-xxl {
  *    // your styles here
- * }
+ *  }
  */
 @mixin v-for-xxl() {
   @include v-mob-first(xxl) {
@@ -88,12 +88,12 @@
 
 
 /**
- * Mixin for applying styles for screens with height less than 600pxpx.
- * Usage:
- * 
- * @include v-before-xs {
+ * @mixin v-before-xs
+ * @description Mixin for applying styles for screens with height less than 600pxpx.
+ * @example
+ *  @include v-before-xs {
  *    // your styles here
- * }
+ *  }
  */
 @mixin v-before-xs() {
   @include v-desk-first(xs) {
@@ -102,12 +102,12 @@
 }
 
 /**
- * Mixin for applying styles for screens with height less than 800pxpx.
- * Usage:
- * 
- * @include v-before-sm {
+ * @mixin v-before-sm
+ * @description Mixin for applying styles for screens with height less than 800pxpx.
+ * @example
+ *  @include v-before-sm {
  *    // your styles here
- * }
+ *  }
  */
 @mixin v-before-sm() {
   @include v-desk-first(sm) {
@@ -116,12 +116,12 @@
 }
 
 /**
- * Mixin for applying styles for screens with height less than 1000pxpx.
- * Usage:
- * 
- * @include v-before-md {
+ * @mixin v-before-md
+ * @description Mixin for applying styles for screens with height less than 1000pxpx.
+ * @example
+ *  @include v-before-md {
  *    // your styles here
- * }
+ *  }
  */
 @mixin v-before-md() {
   @include v-desk-first(md) {
@@ -130,12 +130,12 @@
 }
 
 /**
- * Mixin for applying styles for screens with height less than 1200pxpx.
- * Usage:
- * 
- * @include v-before-lg {
+ * @mixin v-before-lg
+ * @description Mixin for applying styles for screens with height less than 1200pxpx.
+ * @example
+ *  @include v-before-lg {
  *    // your styles here
- * }
+ *  }
  */
 @mixin v-before-lg() {
   @include v-desk-first(lg) {
@@ -144,12 +144,12 @@
 }
 
 /**
- * Mixin for applying styles for screens with height less than 1600pxpx.
- * Usage:
- * 
- * @include v-before-xl {
+ * @mixin v-before-xl
+ * @description Mixin for applying styles for screens with height less than 1600pxpx.
+ * @example
+ *  @include v-before-xl {
  *    // your styles here
- * }
+ *  }
  */
 @mixin v-before-xl() {
   @include v-desk-first(xl) {
@@ -158,12 +158,12 @@
 }
 
 /**
- * Mixin for applying styles for screens with height less than 1601pxpx.
- * Usage:
- * 
- * @include v-before-xxl {
+ * @mixin v-before-xxl
+ * @description Mixin for applying styles for screens with height less than 1601pxpx.
+ * @example
+ *  @include v-before-xxl {
  *    // your styles here
- * }
+ *  }
  */
 @mixin v-before-xxl() {
   @include v-desk-first(xxl) {

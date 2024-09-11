@@ -8,6 +8,14 @@ The package is based on [react-responsive](https://www.npmjs.com/package/react-r
 
 To install the project, run the following command:
 
+### Установка
+
+Пожалуйста, убедитесь, что вы установили следующие зависимости:
+
+```sh
+yarn add react-responsive
+```
+
 ```sh
 # Using Yarn
 yarn add react-responsive-tools

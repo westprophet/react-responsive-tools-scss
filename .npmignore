@@ -1,12 +1,12 @@
 node_modules
-dist
 test
+src
 .git
 .vscode
 .idea
 coverage
 *.log
-webpack.config.js
+webpack.config.mjs
 jest.config.js
 .yarnrc
 .yarn

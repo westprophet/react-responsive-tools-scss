@@ -1,43 +1,49 @@
 #!/bin/bash
 
-# Получение директории, в которой расположен текущий скрипт
-SCRIPT_DIR=$(dirname "$0")
-PACKAGE_DIR=$(cd "$SCRIPT_DIR" && pwd)
+# Путь до каталога dist
+DIST_DIR="./dist"
+SCRIPT_DIR="$DIST_DIR/scripts"
 
-# Запуск createConfig.mjs из пакета
+# Проверка наличия каталога dist/scripts
+if [ ! -d "$SCRIPT_DIR" ]; then
+  echo "Scripts directory $SCRIPT_DIR does not exist."
+  exit 1
+fi
+
+# Запуск createConfig.mjs из dist/scripts
 echo "Running createConfig.mjs from package..."
-node "$PACKAGE_DIR/src/scripts/createConfig.mjs"
+node "$SCRIPT_DIR/createConfig.mjs"
 
 if [ $? -ne 0 ]; then
-echo "Error occurred while running createConfig.mjs"
-exit 1
+  echo "Error occurred while running createConfig.mjs"
+  exit 1
 fi
 
-# Запуск generateCustomBreakpointsSCSS.mjs из пакета
+# Запуск generateCustomBreakpointsSCSS.mjs из dist/scripts
 echo "Running generateCustomBreakpointsSCSS.mjs from package..."
-node "$PACKAGE_DIR/src/scripts/generateCustomBreakpointsSCSS.mjs"
+node "$SCRIPT_DIR/generateCustomBreakpointsSCSS.mjs"
 
 if [ $? -ne 0 ]; then
-echo "Error occurred while running generateCustomBreakpointsSCSS.mjs"
-exit 1
+  echo "Error occurred while running generateCustomBreakpointsSCSS.mjs"
+  exit 1
 fi
 
-# Запуск generateSCSS.mjs из пакета
+# Запуск generateSCSS.mjs из dist/scripts
 echo "Running generateSCSS.mjs from package..."
-node "$PACKAGE_DIR/src/scripts/generateSCSS.mjs"
+node "$SCRIPT_DIR/generateSCSS.mjs"
 
 if [ $? -ne 0 ]; then
-echo "Error occurred while running generateSCSS.mjs"
-exit 1
+  echo "Error occurred while running generateSCSS.mjs"
+  exit 1
 fi
 
-# Запуск generateTBreakpoint.mjs из пакета
+# Запуск generateTBreakpoint.mjs из dist/scripts
 echo "Running generateTBreakpoint.mjs from package..."
-node "$PACKAGE_DIR/src/scripts/generateTBreakpoint.mjs"
+node "$SCRIPT_DIR/generateTBreakpoint.mjs"
 
 if [ $? -ne 0 ]; then
-echo "Error occurred while running generateTBreakpoint.mjs"
-exit 1
+  echo "Error occurred while running generateTBreakpoint.mjs"
+  exit 1
 fi
 
 echo "All scripts have been executed successfully."

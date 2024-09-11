@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url'; // Импортируем необходимую функцию из 'url'
-import { HORIZONTAL_BREAKPOINTS, VERTICAL_BREAKPOINTS } from '../breakpoints.config.mjs';
+import { HORIZONTAL_BREAKPOINTS, VERTICAL_BREAKPOINTS } from '../breakpoints.config.ts';
 
 // Определение __filename и __dirname
 const __filename = fileURLToPath(import.meta.url);

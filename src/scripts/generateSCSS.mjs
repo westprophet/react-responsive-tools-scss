@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { HORIZONTAL_BREAKPOINTS, VERTICAL_BREAKPOINTS } from '../breakpoints.config.mjs';
+import { HORIZONTAL_BREAKPOINTS, VERTICAL_BREAKPOINTS } from '../breakpoints.config.ts';
 
 // Определение __filename и __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -12,12 +12,12 @@ const __dirname = path.dirname(__filename);
 const generateHorizontalSCSS = (breakpoints) => {
   const beforeMixins = Object.keys(breakpoints).map(bp => `
 /**
- * Mixin for applying styles for screens greater than or equal to ${breakpoints[bp]}px.
- * Usage:
- * 
- * @include for-${bp} {
+ * @mixin for-${bp}
+ * @description Mixin for applying styles for screens greater than or equal to ${breakpoints[bp]}px.
+ * @example
+ *  @include for-${bp} {
  *    // your styles here
- * }
+ *  }
  */
 @mixin for-${bp}() {
   @include mob-first(${bp}) {
@@ -27,12 +27,12 @@ const generateHorizontalSCSS = (breakpoints) => {
 
   const afterMixins = Object.keys(breakpoints).map(bp => `
 /**
- * Mixin for applying styles for screens less than ${breakpoints[bp]}px.
- * Usage:
- * 
- * @include before-${bp} {
+ * @mixin before-${bp}
+ * @description Mixin for applying styles for screens less than ${breakpoints[bp]}px.
+ * @example
+ *  @include before-${bp} {
  *    // your styles here
- * }
+ *  }
  */
 @mixin before-${bp}() {
   @include desk-first(${bp}) {
@@ -53,12 +53,12 @@ ${afterMixins}
 const generateVerticalSCSS = (breakpoints) => {
   const beforeMixins = Object.keys(breakpoints).map(bp => `
 /**
- * Mixin for applying styles for screens with height greater than or equal to ${breakpoints[bp]}px.
- * Usage:
- * 
- * @include v-for-${bp} {
+ * @mixin v-for-${bp}
+ * @description Mixin for applying styles for screens with height greater than or equal to ${breakpoints[bp]}px.
+ * @example
+ *  @include v-for-${bp} {
  *    // your styles here
- * }
+ *  }
  */
 @mixin v-for-${bp}() {
   @include v-mob-first(${bp}) {
@@ -68,12 +68,12 @@ const generateVerticalSCSS = (breakpoints) => {
 
   const afterMixins = Object.keys(breakpoints).map(bp => `
 /**
- * Mixin for applying styles for screens with height less than ${breakpoints[bp]}px.
- * Usage:
- * 
- * @include v-before-${bp} {
+ * @mixin v-before-${bp}
+ * @description Mixin for applying styles for screens with height less than ${breakpoints[bp]}px.
+ * @example
+ *  @include v-before-${bp} {
  *    // your styles here
- * }
+ *  }
  */
 @mixin v-before-${bp}() {
   @include v-desk-first(${bp}) {

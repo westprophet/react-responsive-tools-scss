@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import { TVerticalBreakpoint } from '../interfaces/TBreakpoint';
 import { TAdaptiveVariant } from '../interfaces/TAdaptiveVariant';
 import useVariant from './useVariant';
-import getBreakpoint, {getVBreakpoint} from "../functions/getBreakpoint";
+import  {getVBreakpoint} from "../functions/getBreakpoint";
 
 export default function useVBreakpoint(b: TVerticalBreakpoint | number, variant: TAdaptiveVariant = 'MtF') {
   const _bp = typeof b === 'number' ? b + 'px' :  getVBreakpoint(b);

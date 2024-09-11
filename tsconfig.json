@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "lib": ["dom", "es6"],
-    "jsx": "react",
+    "jsx": "react-jsx", // Обновлено для лучшей поддержки React 17+
     "module": "ESNext",
     "moduleResolution": "node",
     "isolatedModules": true,
@@ -11,20 +11,30 @@
     "rootDir": "./src",
     "outDir": "./dist",
     "declaration": true,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-  },
-  "ts-node": {
-    "compilerOptions": {
-      "module": "commonjs"
+    "skipLibCheck": true, // Может ускорить компиляцию
+    "forceConsistentCasingInFileNames": true, // Избегать проблем по реестро-зависимости
+    "baseUrl": ".", // Добавляем базовый URL для настройки путей
+    "paths": {
+      "*": ["src/*"]
     }
   },
   "include": [
-    "declarations.d.ts",
+    "index.ts",
     "src/**/*",
+    "declarations.d.ts"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "test",
-  ]
+    "eslint.config.js",
+    "jest.config.js"
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  }
 }
