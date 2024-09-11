@@ -1,116 +1,15 @@
+@import "_custom-breakpoints";
 
 @mixin mob-first($breakpoint){
-  @media (min-width: var(--bp-#{$breakpoint})) {
+  @media (min-width: map-get($horizontal-breakpoints, $breakpoint)) {
     @content;
   }
 }
 
 @mixin desk-first($breakpoint){
-  @media (max-width: var(--bp-#{$breakpoint})) {
+  @media (max-width: map-get($horizontal-breakpoints, $breakpoint)) {
     @content;
   }
 }
 
 
-@mixin m-xs(){
-  @include mob-first(xs){
-    @content;
-  }
-}
-@mixin m-sm(){
-  @include mob-first(sm){
-    @content;
-  }
-}
-@mixin m-md(){
-  @include mob-first(md){
-    @content;
-  }
-}
-@mixin m-lg(){
-  @include mob-first(lg){
-    @content;
-  }
-}
-@mixin m-lt(){
-  @include mob-first(lt){
-    @content;
-  }
-}
-@mixin m-ltm(){
-  @include mob-first(ltm){
-    @content;
-  }
-}
-@mixin m-ltl(){
-  @include mob-first(ltl){
-    @content;
-  }
-}
-@mixin m-xl(){
-  @include mob-first(xl){
-    @content;
-  }
-}
-@mixin m-xxl(){
-  @include mob-first(xxl){
-    @content;
-  }
-}
-@mixin m-qxl(){
-  @include mob-first(qxl){
-    @content;
-  }
-}
-
-
-@mixin d-xs(){
-  @include desk-first(xs){
-    @content;
-  }
-}
-@mixin d-sm(){
-  @include desk-first(sm){
-    @content;
-  }
-}
-@mixin d-md(){
-  @include desk-first(md){
-    @content;
-  }
-}
-@mixin d-lg(){
-  @include desk-first(lg){
-    @content;
-  }
-}
-@mixin d-lt(){
-  @include desk-first(lt){
-    @content;
-  }
-}
-@mixin d-ltm(){
-  @include desk-first(ltm){
-    @content;
-  }
-}
-@mixin d-ltl(){
-  @include desk-first(ltl){
-    @content;
-  }
-}
-@mixin d-xl(){
-  @include desk-first(xl){
-    @content;
-  }
-}
-@mixin d-xxl(){
-  @include desk-first(xxl){
-    @content;
-  }
-}
-@mixin d-qxl(){
-  @include desk-first(qxl){
-    @content;
-  }
-}

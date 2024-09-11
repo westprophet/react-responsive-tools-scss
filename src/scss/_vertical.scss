@@ -1,73 +1,13 @@
+@import "_custom-breakpoints";
+
 @mixin v-mob-first($breakpoint){
-  @media (min-height: var(--bp-#{$breakpoint})) {
+  @media (min-height: map-get($vertical-breakpoints, $breakpoint)) {
     @content;
   }
 }
 
 @mixin v-desk-first($breakpoint){
-  @media (max-height: var(--bp-#{$breakpoint})) {
-    @content;
-  }
-}
-
-@mixin vm-xs(){
-  @include v-mob-first(xs){
-    @content;
-  }
-}
-@mixin vm-sm(){
-  @include v-mob-first(sm){
-    @content;
-  }
-}
-@mixin vm-md(){
-  @include v-mob-first(md){
-    @content;
-  }
-}
-@mixin vm-lg(){
-  @include v-mob-first(lg){
-    @content;
-  }
-}
-@mixin vm-xl(){
-  @include v-mob-first(xl){
-    @content;
-  }
-}
-@mixin vm-xxl(){
-  @include v-mob-first(xxl){
-    @content;
-  }
-}
-
-@mixin vd-xs(){
-  @include v-desk-first(xs){
-    @content;
-  }
-}
-@mixin vd-sm(){
-  @include v-desk-first(sm){
-    @content;
-  }
-}
-@mixin vd-md(){
-  @include v-desk-first(md){
-    @content;
-  }
-}
-@mixin vd-lg(){
-  @include v-desk-first(lg){
-    @content;
-  }
-}
-@mixin vd-xl(){
-  @include v-desk-first(xl){
-    @content;
-  }
-}
-@mixin vd-xxl(){
-  @include v-desk-first(xxl){
+  @media (max-height: map-get($vertical-breakpoints, $breakpoint)) {
     @content;
   }
 }

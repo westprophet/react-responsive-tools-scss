@@ -18,4 +18,3 @@ export type TVerticalBreakpoint =
     | 'lg'
     | 'xl'
     | 'xxl'
-
