@@ -1,10 +1,11 @@
 {
   "name": "react-responsive-tools",
-  "version": "2.0.2",
+  "version": "2.1.1",
   "description": "",
   "main": "index.js",
   "module": "index.js",
   "types": "index.d.ts",
+  "type": "module",
   "scripts": {
     "dev": "webpack --mode development --watch",
     "tsc": "tsc",
@@ -12,7 +13,8 @@
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
     "lint-fix": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\" --fix",
     "build": "tsc && webpack --mode production",
-    "postinstall": "echo 'To recreate all files, run: react-responsive-tools run reinit'"
+    "postinstall": "echo 'To recreate all files, run: react-responsive-tools run reinit'",
+    "reinit": "sh ./reinit.sh"
   },
   "files": [
     "src",
@@ -71,6 +73,6 @@
     "webpack-cli": "^5.1.4"
   },
   "bin": {
-    "react-responsive-tools": "./bin/react-responsive-tools.js"
+    "react-responsive-tools": "bin/react-responsive-tools.mjs"
   }
 }

@@ -1,43 +1,43 @@
 #!/bin/bash
 
-# Запуск createConfig.js
-echo "Running createConfig.js..."
-node src/scripts/createConfig.js
+# Получение директории, в которой расположен текущий скрипт
+SCRIPT_DIR=$(dirname "$0")
+PACKAGE_DIR=$(cd "$SCRIPT_DIR" && pwd)
 
-# Проверка наличия ошибок
+# Запуск createConfig.mjs из пакета
+echo "Running createConfig.mjs from package..."
+node "$PACKAGE_DIR/src/scripts/createConfig.mjs"
+
 if [ $? -ne 0 ]; then
-  echo "Error occurred while running createConfig.js"
-  exit 1
+echo "Error occurred while running createConfig.mjs"
+exit 1
 fi
 
-# Запуск generateCustomBreakpointsSCSS.js
-echo "Running generateCustomBreakpointsSCSS.js..."
-node src/scripts/generateCustomBreakpointsSCSS.js
+# Запуск generateCustomBreakpointsSCSS.mjs из пакета
+echo "Running generateCustomBreakpointsSCSS.mjs from package..."
+node "$PACKAGE_DIR/src/scripts/generateCustomBreakpointsSCSS.mjs"
 
-# Проверка наличия ошибок
 if [ $? -ne 0 ]; then
-  echo "Error occurred while running generateCustomBreakpointsSCSS.js"
-  exit 1
+echo "Error occurred while running generateCustomBreakpointsSCSS.mjs"
+exit 1
 fi
 
-# Запуск generateSCSS.js
-echo "Running generateSCSS.js..."
-node src/scripts/generateSCSS.js
+# Запуск generateSCSS.mjs из пакета
+echo "Running generateSCSS.mjs from package..."
+node "$PACKAGE_DIR/src/scripts/generateSCSS.mjs"
 
-# Проверка наличия ошибок
 if [ $? -ne 0 ]; then
-  echo "Error occurred while running generateSCSS.js"
-  exit 1
+echo "Error occurred while running generateSCSS.mjs"
+exit 1
 fi
 
-# Запуск generateTBreakpoint.js
-echo "Running generateTBreakpoint.js..."
-node src/scripts/generateTBreakpoint.js
+# Запуск generateTBreakpoint.mjs из пакета
+echo "Running generateTBreakpoint.mjs from package..."
+node "$PACKAGE_DIR/src/scripts/generateTBreakpoint.mjs"
 
-# Проверка наличия ошибок
 if [ $? -ne 0 ]; then
-  echo "Error occurred while running generateTBreakpoint.js"
-  exit 1
+echo "Error occurred while running generateTBreakpoint.mjs"
+exit 1
 fi
 
 echo "All scripts have been executed successfully."
