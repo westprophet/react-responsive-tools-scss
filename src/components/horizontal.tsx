@@ -5,7 +5,7 @@
 import React from "react";
 
 import { TBreakpoint } from '../interfaces/TBreakpoint';
-import { useBreakpointDF, useBreakpointMF } from '../hooks/useBreakpoint';
+import { useBreakpointDF, useBreakpointMF } from '../hooks/useBreakpoint.js';
 
 interface Props {
   children: React.ReactNode;

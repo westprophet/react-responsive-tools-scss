@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { HORIZONTAL_BREAKPOINTS, VERTICAL_BREAKPOINTS } from '../breakpoints.config.ts';
+import { HORIZONTAL_BREAKPOINTS, VERTICAL_BREAKPOINTS } from '../breakpoints.config.js';
 
 // Определение __filename и __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -23,7 +23,7 @@ ${generateTypeAlias(VERTICAL_BREAKPOINTS, 'TVerticalBreakpoint')}
 
 // Создаем файл TBreakpoint.ts и записываем туда содержимое
 fs.writeFileSync(
-    path.resolve(__dirname, '../interfaces/TBreakpoint.ts'),
+    path.resolve(__dirname, '../interfaces/TBreakpoint.d.ts'),
     content.trim()
 );
 

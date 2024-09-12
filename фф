@@ -183,8 +183,8 @@ declare module 'breakpoints.config' {
 
 
 ```typescript
-import { TBreakpoints, TVerticalBreakpoints } from './interfaces/TBreakpoints';
-import { TBreakpoint, TVerticalBreakpoint } from './interfaces/TBreakpoint';
+import { TBreakpoints, TVerticalBreakpoints } from '../interfaces/TBreakpoints';
+import { TBreakpoint, TVerticalBreakpoint } from '../interfaces/TBreakpoint';
 
 export * from './hooks/useBreakpoint';
 export * from './hooks/useVBreakpoint';

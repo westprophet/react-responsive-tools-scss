@@ -1,6 +1,6 @@
 
-import { HORIZONTAL_BREAKPOINTS, VERTICAL_BREAKPOINTS } from '../breakpoints.config';
-import { TBreakpoint, TVerticalBreakpoint } from '../interfaces/TBreakpoint';
+import { HORIZONTAL_BREAKPOINTS, VERTICAL_BREAKPOINTS } from '../breakpoints.config.js';
+import { TBreakpoint, TVerticalBreakpoint } from '../interfaces/TBreakpoint.js';
 
 export default function getBreakpoint(b: TBreakpoint): string {
     return HORIZONTAL_BREAKPOINTS[b];

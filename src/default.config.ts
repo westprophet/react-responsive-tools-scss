@@ -1,6 +1,6 @@
 // breakpointConfig.js
 
-const HORIZONTAL_BREAKPOINTS = {
+const HORIZONTAL_BREAKPOINTS: Record<string, string>  = {
   xs: '320px',
   sm: '576px',
   md: '768px',
@@ -13,7 +13,7 @@ const HORIZONTAL_BREAKPOINTS = {
   qxl: '3840px',
 };
 
-const VERTICAL_BREAKPOINTS = {
+const VERTICAL_BREAKPOINTS: Record<string, string>  = {
   xs: '600px',
   sm: '800px',
   md: '1000px',

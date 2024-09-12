@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { HORIZONTAL_BREAKPOINTS as defaultHorizontalBreakpoints, VERTICAL_BREAKPOINTS as defaultVerticalBreakpoints } from '../default.config.mjs';
+import { HORIZONTAL_BREAKPOINTS as defaultHorizontalBreakpoints, VERTICAL_BREAKPOINTS as defaultVerticalBreakpoints } from '../default.config.js';
 
 // Определение __filename и __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -52,8 +52,8 @@ export { HORIZONTAL_BREAKPOINTS, VERTICAL_BREAKPOINTS };
 `;
 
   try {
-    // Создаем новый файл с именем breakpoints.config.mjs
-    fs.writeFileSync(path.resolve(__dirname, '../breakpoints.config.mjs'), mergedConfigContent);
+    // Создаем новый файл с именем breakpoints.config.js
+    fs.writeFileSync(path.resolve(__dirname, '../breakpoints.config.js'), mergedConfigContent);
     console.log('Config file has been generated successfully.');
   } catch (error) {
     console.error('Error writing merged config file:', error);
