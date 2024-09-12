@@ -1,6 +1,6 @@
 {
   "name": "react-responsive-tools",
-  "version": "2.3.15",
+  "version": "2.3.18",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",

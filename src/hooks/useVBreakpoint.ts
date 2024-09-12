@@ -16,5 +16,5 @@ export function useVBreakpointMF(b: TVerticalBreakpoint | number) {
 }
 
 export function useVBreakpointDF(b: TVerticalBreakpoint | number) {
-  return useVBreakpoint(b, 'MtF');
+  return useVBreakpoint(b, 'DtF');
 }
