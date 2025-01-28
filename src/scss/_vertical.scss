@@ -1,4 +1,4 @@
-@import "_custom-breakpoints";
+@use "_custom-breakpoints" as *;
 
 @mixin v-mob-first($breakpoint){
   @media (min-height: map-get($vertical-breakpoints, $breakpoint)) {

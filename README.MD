@@ -29,7 +29,7 @@ npm install react-responsive-tools
 To use the generated SCSS files, import the main SCSS file from the library:
 
 ```scss
-@import 'react-responsive-tools';
+@use 'react-responsive-tools' as *;
 ```
 
 ### Import JavaScript
@@ -306,7 +306,7 @@ After re-generating the files, the following SCSS mixins will be available:
 #### Horizontal Breakpoints
 
 ```scss
-@import "_custom-breakpoints";
+@use "_custom-breakpoints" as *;
 
 @mixin mob-first($breakpoint) {
   @media (min-width: map-get($horizontal-breakpoints, $breakpoint)) {
@@ -445,7 +445,7 @@ After re-generating the files, the following SCSS mixins will be available:
 #### Vertical Breakpoints
 
 ```scss
-@import "_custom-breakpoints";
+@use "_custom-breakpoints" as *;
 
 @mixin v-mob-first($breakpoint) {
   @media (min-height: map-get($vertical-breakpoints, $breakpoint)) {

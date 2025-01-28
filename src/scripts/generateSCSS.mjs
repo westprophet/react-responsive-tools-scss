@@ -41,7 +41,7 @@ const generateHorizontalSCSS = (breakpoints) => {
 }`).join('\n');
 
   return `
-@import "horizontal";
+@use "horizontal" as *;
 
 ${beforeMixins}
 
@@ -82,7 +82,7 @@ const generateVerticalSCSS = (breakpoints) => {
 }`).join('\n');
 
   return `
-@import "vertical";
+@use "vertical" as *;
 
 ${beforeMixins}
 

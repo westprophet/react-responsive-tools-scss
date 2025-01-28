@@ -1,4 +1,4 @@
-@import "./scss/vertical";
-@import "./scss/horizontal";
-@import "./scss/horizontal-breakpoints";
-@import "./scss/vertical-breakpoints";
+@use "./scss/vertical" as *;
+@use "./scss/horizontal" as *;
+@use "./scss/horizontal-breakpoints" as *;
+@use "./scss/vertical-breakpoints" as *;
