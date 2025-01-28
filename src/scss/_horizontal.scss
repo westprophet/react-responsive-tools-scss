@@ -1,4 +1,4 @@
-@import "_custom-breakpoints";
+@use "_custom-breakpoints" as *;
 
 @mixin mob-first($breakpoint){
   @media (min-width: map-get($horizontal-breakpoints, $breakpoint)) {

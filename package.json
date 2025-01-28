@@ -1,6 +1,6 @@
 {
   "name": "react-responsive-tools",
-  "version": "2.3.18",
+  "version": "2.3.22",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -73,7 +73,7 @@
     "react-dom": "^18.3.1",
     "react-responsive": "^10.0.0",
     "react-test-renderer": "^18.3.1",
-    "sass": "^1.78.0",
+    "sass-embedded": "^1.83.1",
     "sass-loader": "^16.0.1",
     "style-loader": "^4.0.0",
     "ts-jest": "^29.2.5",
