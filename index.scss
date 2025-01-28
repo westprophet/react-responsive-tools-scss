@@ -1,4 +1,4 @@
-@use "./dist/scss/vertical" as *;
-@use "./dist/scss/horizontal" as *;
-@use "./dist/scss/horizontal-breakpoints" as *;
-@use "./dist/scss/vertical-breakpoints" as *;
+@forward "./dist/scss/vertical";
+@forward "./dist/scss/horizontal";
+@forward "./dist/scss/horizontal-breakpoints";
+@forward "./dist/scss/vertical-breakpoints";
