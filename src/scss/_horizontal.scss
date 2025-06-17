@@ -1,13 +1,15 @@
-@use "_custom-breakpoints" as *;
+@use "sass:map";
+
+@use "_custom-breakpoints" as bp;
 
 @mixin mob-first($breakpoint){
-  @media (min-width: map-get($horizontal-breakpoints, $breakpoint)) {
+  @media (min-width: map.get(bp.$horizontal-breakpoints, $breakpoint)) {
     @content;
   }
 }
 
 @mixin desk-first($breakpoint){
-  @media (max-width: map-get($horizontal-breakpoints, $breakpoint)) {
+  @media (max-width: map.get(bp.$horizontal-breakpoints, $breakpoint)) {
     @content;
   }
 }

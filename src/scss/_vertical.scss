@@ -1,13 +1,15 @@
-@use "_custom-breakpoints" as *;
+@use "sass:map";
+
+@use "_custom-breakpoints" as bp;
 
 @mixin v-mob-first($breakpoint){
-  @media (min-height: map-get($vertical-breakpoints, $breakpoint)) {
+  @media (min-height: map.get(bp.$vertical-breakpoints, $breakpoint)) {
     @content;
   }
 }
 
 @mixin v-desk-first($breakpoint){
-  @media (max-height: map-get($vertical-breakpoints, $breakpoint)) {
+  @media (max-height: map.get(bp.$vertical-breakpoints, $breakpoint)) {
     @content;
   }
 }

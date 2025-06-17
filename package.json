@@ -1,6 +1,6 @@
 {
   "name": "react-responsive-tools",
-  "version": "2.4.2",
+  "version": "2.4.7",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -33,9 +33,9 @@
   "author": "westprophet",
   "license": "ISC",
   "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-responsive": "^10.0.0"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-responsive": "^10.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.25.6",
@@ -73,7 +73,7 @@
     "react-dom": "^18.3.1",
     "react-responsive": "^10.0.0",
     "react-test-renderer": "^18.3.1",
-    "sass": "^1.78.0",
+    "sass-embedded": "^1.83.4",
     "sass-loader": "^16.0.1",
     "style-loader": "^4.0.0",
     "ts-jest": "^29.2.5",
