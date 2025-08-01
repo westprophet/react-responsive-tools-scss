@@ -5,7 +5,7 @@ import { TAdaptiveVariant } from '../interfaces/TAdaptiveVariant.js';
 import useVariant from './useVariant.js';
 import getBreakpoint from "../functions/getBreakpoint.js";
 
-export default function useBreakpoint(b: TBreakpoint | number, variant: TAdaptiveVariant = 'MtF') {
+export function useBreakpoint(b: TBreakpoint | number, variant: TAdaptiveVariant = 'MtF') {
   const _bp = typeof b === 'number' ? b + 'px' :  getBreakpoint(b);
   const v = useVariant(variant);
   return useMediaQuery({ query: `(${v}-width: ${_bp})` });
