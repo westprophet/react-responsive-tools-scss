@@ -47,8 +47,8 @@
            fi
 
            # Run generateTBreakpoint.mjs from dist/scripts
-#           echo "Running generateTBreakpoint.mjs from package..."
-#           node "$SCRIPT_DIR/generateTBreakpoint.mjs"
+           echo "Running generateTBreakpoint.mjs from package..."
+           node "$SCRIPT_DIR/generateTBreakpoint.mjs"
 
            if [ $? -ne 0 ]; then
              echo "Error occurred while running generateTBreakpoint.mjs"

@@ -1,6 +1,20 @@
-import {HORIZONTAL_BREAKPOINTS, VERTICAL_BREAKPOINTS} from "../breakpoints.config";
+export type TBreakpoint =
+    | 'xs'
+    | 'sm'
+    | 'md'
+    | 'lg'
+    | 'lt'
+    | 'ltm'
+    | 'ltl'
+    | 'xl'
+    | 'xxl'
+    | 'qxl'
 
-export type TBreakpoint = keyof typeof HORIZONTAL_BREAKPOINTS;
 
-
-export type TVerticalBreakpoint = keyof typeof VERTICAL_BREAKPOINTS;
+export type TVerticalBreakpoint =
+    | 'xs'
+    | 'sm'
+    | 'md'
+    | 'lg'
+    | 'xl'
+    | 'xxl'
