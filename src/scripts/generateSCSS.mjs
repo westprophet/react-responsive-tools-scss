@@ -4,13 +4,13 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { HORIZONTAL_BREAKPOINTS, VERTICAL_BREAKPOINTS } from '../breakpoints.config.js';
 
-// Определение __filename и __dirname
+// Definition of __filename and __dirname
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Функция генерации SCSS содержимого для горизонтальных брейкпоинтов
+// Function for generating SCSS content for horizontal breakpoints
 const generateHorizontalSCSS = (breakpoints) => {
-  const beforeMixins = Object.keys(breakpoints).map(bp => `
+    const beforeMixins = Object.keys(breakpoints).map(bp => `
 /**
  * @mixin for-${bp}
  * @description Mixin for applying styles for screens greater than or equal to ${breakpoints[bp]}px.
@@ -25,7 +25,7 @@ const generateHorizontalSCSS = (breakpoints) => {
   }
 }`).join('\n');
 
-  const afterMixins = Object.keys(breakpoints).map(bp => `
+    const afterMixins = Object.keys(breakpoints).map(bp => `
 /**
  * @mixin before-${bp}
  * @description Mixin for applying styles for screens less than ${breakpoints[bp]}px.
@@ -40,7 +40,7 @@ const generateHorizontalSCSS = (breakpoints) => {
   }
 }`).join('\n');
 
-  return `
+    return `
 @use "horizontal" as *;
 
 ${beforeMixins}
@@ -49,9 +49,9 @@ ${afterMixins}
 `;
 };
 
-// Функция генерации SCSS содержимого для вертикальных брейкпоинтов
+// Function for generating SCSS content for vertical breakpoints
 const generateVerticalSCSS = (breakpoints) => {
-  const beforeMixins = Object.keys(breakpoints).map(bp => `
+    const beforeMixins = Object.keys(breakpoints).map(bp => `
 /**
  * @mixin v-for-${bp}
  * @description Mixin for applying styles for screens with height greater than or equal to ${breakpoints[bp]}px.
@@ -66,7 +66,7 @@ const generateVerticalSCSS = (breakpoints) => {
   }
 }`).join('\n');
 
-  const afterMixins = Object.keys(breakpoints).map(bp => `
+    const afterMixins = Object.keys(breakpoints).map(bp => `
 /**
  * @mixin v-before-${bp}
  * @description Mixin for applying styles for screens with height less than ${breakpoints[bp]}px.
@@ -81,7 +81,7 @@ const generateVerticalSCSS = (breakpoints) => {
   }
 }`).join('\n');
 
-  return `
+    return `
 @use "vertical" as *;
 
 ${beforeMixins}
@@ -90,7 +90,7 @@ ${afterMixins}
 `;
 };
 
-// Создаем файлы SCSS с миксинами
+// Create SCSS files with mixins
 const horizontalSCSSContent = generateHorizontalSCSS(HORIZONTAL_BREAKPOINTS);
 const verticalSCSSContent = generateVerticalSCSS(VERTICAL_BREAKPOINTS);
 

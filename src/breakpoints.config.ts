@@ -1,5 +1,10 @@
 // src/breakpoints.config.ts
 
+import {TAdaptiveVariant} from "./interfaces/TAdaptiveVariant";
+
+export const PREFERRED_VARIANT:TAdaptiveVariant = 'DtF' // DESKTOP_TO_FIRST
+
+
 const HORIZONTAL_BREAKPOINTS: Record<string, string> = {
   "xs": "320px",
   "sm": "576px",

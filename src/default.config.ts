@@ -1,5 +1,9 @@
 // breakpointConfig.js
 
+import {TAdaptiveVariant} from "./interfaces/TAdaptiveVariant";
+
+const PREFERRED_VARIANT:TAdaptiveVariant = 'DtF' // DESKTOP_TO_FIRST
+
 const HORIZONTAL_BREAKPOINTS: Record<string, string>  = {
   xs: '320px',
   sm: '576px',
@@ -22,4 +26,4 @@ const VERTICAL_BREAKPOINTS: Record<string, string>  = {
   xxl: '1601px',
 };
 
-export { HORIZONTAL_BREAKPOINTS, VERTICAL_BREAKPOINTS };
+export { HORIZONTAL_BREAKPOINTS, VERTICAL_BREAKPOINTS, PREFERRED_VARIANT };

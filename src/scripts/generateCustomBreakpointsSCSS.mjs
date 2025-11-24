@@ -1,27 +1,27 @@
 // generateSCSSMaps.js
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url'; // Импортируем необходимую функцию из 'url'
+import { fileURLToPath } from 'url'; // Import the required function from 'url'
 import { HORIZONTAL_BREAKPOINTS, VERTICAL_BREAKPOINTS } from '../breakpoints.config.js';
 
-// Определение __filename и __dirname
+// Definition of __filename and __dirname
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Функция генерации SCSS map
+// Function for generating SCSS map
 const generateSCSSMap = (breakpoints, name) => {
-  return `$${name}-breakpoints: (\n${Object.entries(breakpoints)
-      .map(([key, value]) => `  ${key}: ${value}`)
-      .join(',\n')}\n);`;
+    return `$${name}-breakpoints: (\n${Object.entries(breakpoints)
+        .map(([key, value]) => `  ${key}: ${value}`)
+        .join(',\n')}\n);`;
 };
 
-// Создаем содержимое SCSS файла
+// Create the contents of the SCSS file
 const scssContent = `
 ${generateSCSSMap(HORIZONTAL_BREAKPOINTS, 'horizontal')}
 ${generateSCSSMap(VERTICAL_BREAKPOINTS, 'vertical')}
 `;
 
-// Записываем содержимое в файл _custom-breakpoints.scss
+// Write the contents to the _custom-breakpoints.scss file
 fs.writeFileSync(
     path.resolve(__dirname, '../scss/_custom-breakpoints.scss'),
     scssContent
