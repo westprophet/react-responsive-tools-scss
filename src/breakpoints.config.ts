@@ -18,7 +18,7 @@ import {TAdaptiveVariant} from "./interfaces/TAdaptiveVariant";
  * which causes an overlap. By shifting one of them by 1px we guarantee
  * that a given pixel belongs to only one range.
  */
-export const PREFERRED_VARIANT:TAdaptiveVariant = 'MtF' // DESKTOP_TO_FIRST
+export const PREFERRED_VARIANT:TAdaptiveVariant = 'MtF' // Mobile to first
 
 
 const HORIZONTAL_BREAKPOINTS: Record<string, number> = {

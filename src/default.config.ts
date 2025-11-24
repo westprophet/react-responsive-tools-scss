@@ -2,7 +2,7 @@
 
 import {TAdaptiveVariant} from "./interfaces/TAdaptiveVariant";
 
-const PREFERRED_VARIANT:TAdaptiveVariant = 'MtF' // DESKTOP_TO_FIRST
+const PREFERRED_VARIANT:TAdaptiveVariant = 'MtF' // Mobile to first
 
 const HORIZONTAL_BREAKPOINTS: Record<string, number> = {
     "xs": 320,

@@ -30,8 +30,11 @@ export function useBreakpoint(b: TBreakpoint | number, variant: TAdaptiveVariant
     let _bp: number = typeof b === 'number' ? b : HORIZONTAL_BREAKPOINTS[b];
     const v = variant === 'MtF' ? 'min': 'max';
 
-    if (variant !== PREFERRED_VARIANT)
+    if('DtF' === variant && PREFERRED_VARIANT === 'MtF'){
         _bp = _bp - 1;
+    } else if('MtF' === variant && PREFERRED_VARIANT === 'DtF'){
+        _bp = _bp + 1;
+    }
 
     return useMediaQuery({query: `(${v}-width: ${_bp}px)`});
 }
@@ -76,7 +79,7 @@ export function useBreakpointBetween(
             _max = _max - 1;
             break;
         case 'DtF':
-            _min = _min - 1;
+            _min = _min + 1;
             break;
     }
 
