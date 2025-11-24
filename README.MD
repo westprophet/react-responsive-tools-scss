@@ -8,10 +8,6 @@ The package is based on [react-responsive](https://www.npmjs.com/package/react-r
 
 To install the project, run the following command:
 
-### Установка
-
-Пожалуйста, убедитесь, что вы установили следующие зависимости:
-
 ```sh
 yarn add react-responsive
 ```
@@ -57,6 +53,16 @@ This command will run the `reinit.sh` script, which will recreate the necessary 
 ### Default Values
 
 The following horizontal and vertical breakpoints are provided by default:
+
+### Preferred Adaptive Variant (`PREFERRED_VARIANT`)
+
+By default, the library uses the following preferred adaptive variant:
+
+```ts 
+    // DESKTOP_TO_FIRST or MOBILE_TO_FIRST
+    // TAdaptiveVariant = Dtf | MtF
+    export const PREFERRED_VARIANT: TAdaptiveVariant = 'DtF';  
+```
 
 #### Horizontal Breakpoints
 
@@ -107,38 +113,29 @@ const MyComponent = () => {
 };
 ```
 
-#### Hook `useBreakpointMF`
+#### Hook `useBreakpointBetween`
+
+`useBreakpointBetween` is an optimized hook for checking whether the current
+viewport is between two breakpoints (`min` and `max`).
+
+It is especially useful as a safe replacement for combining `useBreakpoint`
+with both mobile-first (`For`) and desktop-first (`Before`) logic, where
+their ranges would otherwise overlap at the same pixel (for example,
+`min-width: 300px` and `max-width: 300px` both including 300px).
+
+Internally the hook adjusts one of the boundaries by `1px` based on
+the preferred adaptive variant (`PREFERRED_VARIANT`) to ensure that
+a particular pixel falls into only one range.
 
 ```typescript
-import { useBreakpointMF } from 'react-responsive-tools';
+    import { useBreakpointBetween } from 'react-responsive-tools';
 
-// Usage Example
-const MyComponent = () => {
-    const isMedium = useBreakpointMF('md');
-
-    return (
-        <div>
-            {isMedium && <p>Current breakpoint: Medium (md) for Mobile First</p>}
-        </div>
-    );
-};
-```
-
-#### Hook `useBreakpointDF`
-
-```typescript
-import { useBreakpointDF } from 'react-responsive-tools';
-
-// Usage Example
-const MyComponent = () => {
-    const isLarge = useBreakpointDF('lg');
-
-    return (
-        <div>
-            {isLarge && <p>Current breakpoint: Large (lg) for Desktop First</p>}
-        </div>
-    );
-};
+    const MyComponent = () => { 
+        const isVisible = useBreakpointBetween('sm', 'lg');
+        return (
+            {isVisible && Visible only between "sm" and "lg" breakpoints}
+        ); 
+    };
 ```
 
 #### Hook `useVBreakpoint`
@@ -153,40 +150,6 @@ const MyComponent = () => {
     return (
         <div>
             {isMedium && <p>Current vertical breakpoint: Medium (md)</p>}
-        </div>
-    );
-};
-```
-
-#### Hook `useVBreakpointMF`
-
-```typescript
-import { useVBreakpointMF } from 'react-responsive-tools';
-
-// Usage Example
-const MyComponent = () => {
-    const isMedium = useVBreakpointMF('md');
-
-    return (
-        <div>
-            {isMedium && <p>Current vertical breakpoint: Medium (md) for Mobile First</p>}
-        </div>
-    );
-};
-```
-
-#### Hook `useVBreakpointDF`
-
-```typescript
-import { useVBreakpointDF } from 'react-responsive-tools';
-
-// Usage Example
-const MyComponent = () => {
-    const isLarge = useVBreakpointDF('lg');
-
-    return (
-        <div>
-            {isLarge && <p>Current vertical breakpoint: Large (lg) for Desktop First</p>}
         </div>
     );
 };
@@ -230,6 +193,37 @@ const CustomSizeComponent = () => (
         <p>This content is visible only at the Custom (1200px) breakpoint</p>
     </Before>
 );
+```
+
+#### Component `Between`
+
+`Between` is a convenience component built on top of `useBreakpointBetween`.
+It renders its children only when the viewport width is between `min` and `max`.
+
+Compared to combining `For` and `Before`, `Between` automatically applies the
+1px shift logic to avoid overlapping ranges.
+
+```tsx
+import React from 'react';
+
+import { Between } from 'react-responsive-tools';
+
+/**
+ * Visible only on tablet widths: from "sm" (576px) up to "lg" (992px)
+ * with a safe 1px gap between adjacent ranges.
+ */
+export function TabletOnlyBanner() {
+    return (
+        <Between min="sm" max="lg">
+            <section className="tablet-banner">
+                <h2>Tablet-only promo</h2>
+                <p>
+                    This banner is visible only between the <code>sm</code> and <code>lg</code> breakpoints.
+                </p>
+            </section>
+        </Between>
+    );
+}
 ```
 
 ### Breakpoint Types
