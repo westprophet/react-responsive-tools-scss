@@ -1,14 +1,14 @@
 #!/bin/bash
 
-           # Путь до каталога dist
+           # Path to dist directory
            DIST_DIR="./dist"
            SCRIPT_DIR="$DIST_DIR/scripts"
 
-           # Диагностическая информация
+           # Diagnostic information
            echo "DIST_DIR: $DIST_DIR"
            echo "SCRIPT_DIR: $SCRIPT_DIR"
 
-           # Проверка наличия каталога dist и scripts
+           # Check if dist and scripts directories exist
            echo "Listing contents of current directory:"
            ls -la
            echo "Listing contents of DIST_DIR:"
@@ -19,7 +19,7 @@
              exit 1
            fi
 
-           # Запуск createConfig.mjs из dist/scripts
+           # Run createConfig.mjs from dist/scripts
            echo "Running createConfig.mjs from package..."
            node "$SCRIPT_DIR/createConfig.mjs"
 
@@ -28,7 +28,7 @@
              exit 1
            fi
 
-           # Запуск generateCustomBreakpointsSCSS.mjs из dist/scripts
+           # Run generateCustomBreakpointsSCSS.mjs from dist/scripts
            echo "Running generateCustomBreakpointsSCSS.mjs from package..."
            node "$SCRIPT_DIR/generateCustomBreakpointsSCSS.mjs"
 
@@ -37,7 +37,7 @@
              exit 1
            fi
 
-           # Запуск generateSCSS.mjs из dist/scripts
+           # Run generateSCSS.mjs from dist/scripts
            echo "Running generateSCSS.mjs from package..."
            node "$SCRIPT_DIR/generateSCSS.mjs"
 
@@ -46,9 +46,9 @@
              exit 1
            fi
 
-           # Запуск generateTBreakpoint.mjs из dist/scripts
-           echo "Running generateTBreakpoint.mjs from package..."
-           node "$SCRIPT_DIR/generateTBreakpoint.mjs"
+           # Run generateTBreakpoint.mjs from dist/scripts
+#           echo "Running generateTBreakpoint.mjs from package..."
+#           node "$SCRIPT_DIR/generateTBreakpoint.mjs"
 
            if [ $? -ne 0 ]; then
              echo "Error occurred while running generateTBreakpoint.mjs"

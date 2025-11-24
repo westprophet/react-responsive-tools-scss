@@ -1,10 +1,7 @@
 import { useMediaQuery } from 'react-responsive';
-import { PREFERRED_VARIANT } from '../breakpoints.config';
-
+import { PREFERRED_VARIANT, HORIZONTAL_BREAKPOINTS } from '../breakpoints.config';
 import { TBreakpoint } from '../interfaces/TBreakpoint';
 import { TAdaptiveVariant } from '../interfaces/TAdaptiveVariant';
-import useVariant from './useVariant';
-import { getBreakpoint } from "../functions/getBreakpoint";
 
 /**
  * Low-level hook that checks if the current viewport matches a horizontal breakpoint.
@@ -27,9 +24,11 @@ import { getBreakpoint } from "../functions/getBreakpoint";
  * @returns `true` if the media query matches, otherwise `false` or `null`
  *          (depending on `react-responsive` behavior).
  */
-export function useBreakpoint(b: TBreakpoint | number, variant: TAdaptiveVariant = PREFERRED_VARIANT): boolean | null {
-    let _bp: number = typeof b === 'number' ? b : +getBreakpoint(b);
-    const v = useVariant(variant);
+
+
+export function useBreakpoint(b: TBreakpoint | number, variant: TAdaptiveVariant = PREFERRED_VARIANT) {
+    let _bp: number = typeof b === 'number' ? b : HORIZONTAL_BREAKPOINTS[b];
+    const v = variant === 'MtF' ? 'min': 'max';
 
     if (variant !== PREFERRED_VARIANT)
         _bp = _bp - 1;
@@ -69,8 +68,8 @@ export function useBreakpointBetween(
     min: TBreakpoint | number,
     max: TBreakpoint | number,
     preferredVariant: TAdaptiveVariant = PREFERRED_VARIANT){
-    let _min: number = typeof min === 'number' ? min : +getBreakpoint(min);
-    let _max: number = typeof max === 'number' ? max : +getBreakpoint(max);
+    let _min: number = typeof min === 'number' ? min : HORIZONTAL_BREAKPOINTS[min];
+    let _max: number = typeof max === 'number' ? max : HORIZONTAL_BREAKPOINTS[max];
 
     switch (preferredVariant) {
         case 'MtF':

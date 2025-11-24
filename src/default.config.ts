@@ -2,28 +2,28 @@
 
 import {TAdaptiveVariant} from "./interfaces/TAdaptiveVariant";
 
-const PREFERRED_VARIANT:TAdaptiveVariant = 'DtF' // DESKTOP_TO_FIRST
+const PREFERRED_VARIANT:TAdaptiveVariant = 'MtF' // DESKTOP_TO_FIRST
 
-const HORIZONTAL_BREAKPOINTS: Record<string, string>  = {
-  xs: '320px',
-  sm: '576px',
-  md: '768px',
-  lg: '992px',
-  lt: '1024px',
-  ltm: '1200px',
-  ltl: '1440px',
-  xl: '1920px',
-  xxl: '2560px',
-  qxl: '3840px',
+const HORIZONTAL_BREAKPOINTS: Record<string, number> = {
+    "xs": 320,
+    "sm": 576,
+    "md": 768,
+    "lg": 992,
+    "lt": 1024,
+    "ltm": 1200,
+    "ltl": 1440,
+    "xl": 1920,
+    "xxl": 2560,
+    "qxl": 384,
 };
 
-const VERTICAL_BREAKPOINTS: Record<string, string>  = {
-  xs: '600px',
-  sm: '800px',
-  md: '1000px',
-  lg: '1200px',
-  xl: '1600px',
-  xxl: '1601px',
+const VERTICAL_BREAKPOINTS: Record<string, number> = {
+    "xs": 600,
+    "sm": 800,
+    "md": 1000,
+    "lg": 1200,
+    "xl": 1600,
+    "xxl": 160,
 };
 
 export { HORIZONTAL_BREAKPOINTS, VERTICAL_BREAKPOINTS, PREFERRED_VARIANT };
