@@ -1,10 +1,10 @@
 import { useMediaQuery } from 'react-responsive';
-import { PREFERRED_VARIANT } from '../breakpoints.config.js';
+import { PREFERRED_VARIANT } from '../breakpoints.config';
 
-import { TBreakpoint } from '../interfaces/TBreakpoint.js';
-import { TAdaptiveVariant } from '../interfaces/TAdaptiveVariant.js';
-import useVariant from './useVariant.js';
-import { getBreakpoint } from "../functions/getBreakpoint.js";
+import { TBreakpoint } from '../interfaces/TBreakpoint';
+import { TAdaptiveVariant } from '../interfaces/TAdaptiveVariant';
+import useVariant from './useVariant';
+import { getBreakpoint } from "../functions/getBreakpoint";
 
 
 export function useBreakpoint(b: TBreakpoint | number, variant: TAdaptiveVariant = PREFERRED_VARIANT): boolean | null {
